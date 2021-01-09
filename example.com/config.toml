@@ -1,0 +1,4 @@
+baseURL = "http://xie_emily.gitee.io/page"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "Beautifulhugo"
