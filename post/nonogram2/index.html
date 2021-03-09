@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Nonogram Solver 2 - Xieemily Blog Site</title>
+  <meta name="description" content="Program Implementation">
+  <meta name="author" content="Mengying.Xie"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Xieemily Blog Site",
+    
+    "url": "https:\/\/Xieemily.github.io"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/Xieemily.github.io"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/Xieemily.github.io",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/Xieemily.github.io\/post\/nonogram2\/",
+          "name": "Nonogram solver 2"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Mengying.Xie"
+  },
+  "headline": "Nonogram Solver 2",
+  "description" : "这篇博客介绍程序实现。\n程序的运行说明及命令行参数见README.md\n",
+  "inLanguage" : "en",
+  "wordCount":  1299 ,
+  "datePublished" : "2021-02-07T00:00:00",
+  "dateModified" : "2021-02-07T00:00:00",
+  "image" : "https:\/\/Xieemily.github.io\/img\/avatar-icon.png",
+  "keywords" : [ "nonogram, java" ],
+  "mainEntityOfPage" : "https:\/\/Xieemily.github.io\/post\/nonogram2\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/Xieemily.github.io",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/Xieemily.github.io\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Nonogram Solver 2" />
+<meta property="og:description" content="Program Implementation">
+<meta property="og:image" content="https://Xieemily.github.io/img/avatar-icon.png" />
+<meta property="og:url" content="https://Xieemily.github.io/post/nonogram2/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Xieemily Blog Site" />
+
+  <meta name="twitter:title" content="Nonogram Solver 2" />
+  <meta name="twitter:description" content="Program Implementation">
+  <meta name="twitter:image" content="https://Xieemily.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <link href='https://Xieemily.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.80.0" />
+  <link rel="alternate" href="https://Xieemily.github.io/index.xml" type="application/rss+xml" title="Xieemily Blog Site"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://Xieemily.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://Xieemily.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://Xieemily.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://Xieemily.github.io">Xieemily Blog Site</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+
+        
+
+        
+          <li>
+            <a href="#modalSearch" data-toggle="modal" data-target="#modalSearch" style="outline: none;">
+              <span class="hidden-sm hidden-md hidden-lg">Search</span> <span id="searchGlyph" class="glyphicon glyphicon-search"></span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Xieemily Blog Site" href="https://Xieemily.github.io">
+            <img class="avatar-img" src="https://Xieemily.github.io/img/avatar-icon.png" alt="Xieemily Blog Site" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+  <div id="modalSearch" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Search Xieemily Blog Site</h4>
+        </div>
+        <div class="modal-body">
+          <gcse:search></gcse:search>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Nonogram Solver 2</h1>
+              
+              
+              
+                
+                  <h2 class="post-subheading">Program Implementation</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on February 7, 2021
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;7&nbsp;minutes
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;1299&nbsp;words
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Mengying.Xie
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>这篇博客介绍程序实现。</p>
+<p>程序的运行说明及命令行参数见README.md</p>
+<p><img src="/media/einstein_game.jpg" alt=""></p>
+<h3 id="程序实现">程序实现</h3>
+<h4 id="程序结构">程序结构</h4>
+<p>程序包含如下六个类：</p>
+<p><img src="/media/class_relation.jpg" alt=""></p>
+<ul>
+<li>
+<p><code>ImgProcess</code>: 将输入图片转化为二值</p>
+</li>
+<li>
+<p><code>GameState</code>: 记录游戏棋盘及数字提示</p>
+</li>
+<li>
+<p><code>Slover</code>: 包含求解所需方法</p>
+</li>
+<li>
+<p><code>SolveGame</code>: 实际求解游戏</p>
+</li>
+<li>
+<p><code>FileIO</code>: 文件创建及读写</p>
+</li>
+<li>
+<p><code>Main</code></p>
+</li>
+</ul>
+<h4 id="图像转化为游戏">图像转化为游戏</h4>
+<p><img src="/media/img_proc.jpg" alt="image_process"></p>
+<p>主要方法为<code>ConvertToBinary（）</code>，逐像素处理， 根据强度I=(R+B+G)/3判断，实际中设置为R+B+G&gt;383效果比较好，结果记录在rec[][]中。</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="cm">/**
+</span><span class="cm">     * Convert input image to binary image by comparing pixel intensity
+</span><span class="cm">     *
+</span><span class="cm">     * @param srcImg path of source image
+</span><span class="cm">     * @return binary image
+</span><span class="cm">     */</span>
+    <span class="kr">private</span> <span class="nx">BufferedImage</span> <span class="nx">ConvertToBinary</span><span class="p">(</span><span class="nx">BufferedImage</span> <span class="nx">srcImg</span><span class="p">)</span> <span class="kr">throws</span> <span class="nx">IOException</span> <span class="p">{</span>
+        <span class="nx">rec</span> <span class="o">=</span> <span class="k">new</span> <span class="kr">int</span><span class="p">[</span><span class="nx">IMG_SIZE_Y</span><span class="p">][</span><span class="nx">IMG_SIZE_X</span><span class="p">];</span>
+        <span class="nx">BufferedImage</span> <span class="nx">binaryImg</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BufferedImage</span><span class="p">(</span><span class="nx">IMG_SIZE_X</span><span class="p">,</span> <span class="nx">IMG_SIZE_Y</span><span class="p">,</span> <span class="nx">BufferedImage</span><span class="p">.</span><span class="nx">TYPE_INT_RGB</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">srcImg</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&#34;No image loaded&#34;</span><span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">IMG_SIZE_X</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">IMG_SIZE_Y</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="c1">// Get RGB Value
+</span><span class="c1"></span>                    <span class="kr">int</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">srcImg</span><span class="p">.</span><span class="nx">getRGB</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">);</span>
+                    <span class="c1">// Convert to three separate channels
+</span><span class="c1"></span>                    <span class="kr">int</span> <span class="nx">r</span> <span class="o">=</span> <span class="p">(</span><span class="mh">0x00ff0000</span> <span class="o">&amp;</span> <span class="nx">val</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">;</span>
+                    <span class="kr">int</span> <span class="nx">g</span> <span class="o">=</span> <span class="p">(</span><span class="mh">0x0000ff00</span> <span class="o">&amp;</span> <span class="nx">val</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">;</span>
+                    <span class="kr">int</span> <span class="nx">b</span> <span class="o">=</span> <span class="p">(</span><span class="mh">0x000000ff</span> <span class="o">&amp;</span> <span class="nx">val</span><span class="p">);</span>
+                    <span class="kr">int</span> <span class="nx">m</span> <span class="o">=</span> <span class="p">(</span><span class="nx">r</span> <span class="o">+</span> <span class="nx">g</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
+                    <span class="c1">// (255+255+255)/2 =283 middle of intensity
+</span><span class="c1"></span>                    <span class="k">if</span> <span class="p">(</span><span class="nx">m</span> <span class="o">&gt;=</span> <span class="mi">383</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="c1">// for light color, set white
+</span><span class="c1"></span>                        <span class="nx">binaryImg</span><span class="p">.</span><span class="nx">setRGB</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">Color</span><span class="p">.</span><span class="nx">WHITE</span><span class="p">.</span><span class="nx">getRGB</span><span class="p">());</span>
+                    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                        <span class="c1">// for dark color, set black
+</span><span class="c1"></span>                        <span class="nx">binaryImg</span><span class="p">.</span><span class="nx">setRGB</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+                        <span class="nx">rec</span><span class="p">[</span><span class="nx">j</span><span class="p">][</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">binaryImg</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div><p>相应的，在<code>Gamestate</code>类中提供构造函数来从图片生成游戏，<code>GenerateHint()</code>将生成的提示记录在<code>GameState</code>成员变量中：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+</span><span class="cm">    * Generate game when image is specified, hint is generated.
+</span><span class="cm">    *
+</span><span class="cm">    * @param path         image path
+</span><span class="cm">    * @param _gameSizeRow board length y
+</span><span class="cm">    * @param _gameSizeCol board length x
+</span><span class="cm">    * @throws IOException input error
+</span><span class="cm">    */</span>
+  <span class="nx">GameState</span><span class="p">(</span><span class="nb">String</span> <span class="nx">path</span><span class="p">,</span> <span class="kr">int</span> <span class="nx">_gameSizeRow</span><span class="p">,</span> <span class="kr">int</span> <span class="nx">_gameSizeCol</span><span class="p">)</span> <span class="kr">throws</span> <span class="nx">IOException</span> <span class="p">{</span>
+        <span class="nx">BOARD_SIZE_ROW</span> <span class="o">=</span> <span class="nx">_gameSizeRow</span><span class="p">;</span>
+        <span class="nx">BOARD_SIZE_COL</span> <span class="o">=</span> <span class="nx">_gameSizeCol</span><span class="p">;</span>
+        <span class="nx">board</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CellState</span><span class="p">[</span><span class="nx">BOARD_SIZE_ROW</span><span class="p">][</span><span class="nx">BOARD_SIZE_COL</span><span class="p">];</span>
+        <span class="nx">GenerateGameFromImg</span><span class="p">(</span><span class="nx">path</span><span class="p">);</span>
+        <span class="nx">GenerateHint</span><span class="p">();</span>
+  <span class="p">}</span>
+</code></pre></div><p><code>GameState</code>类如下， <code>hintRow</code>记录行提示， <code>hintCol</code>记录列提示， <code>board</code>为一个<code>enum CellState</code>的二维数组:</p>
+<p><img src="/media/gamestate.jpg" alt="gamestate"></p>
+<p>类构造函数有两个重载， 一个从图片生成游戏，一个从游戏提示生成游戏。单元格状态包括三种：空， 填， 不确定，使用enum类<code>CellState</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">enum</span> <span class="n">CellState</span> <span class="o">{</span>
+        <span class="n">FILLED</span><span class="o">,</span>
+        <span class="n">EMPTY</span><span class="o">,</span>
+        <span class="n">UNKNOWN</span>
+    <span class="o">}</span>
+</code></pre></div><ul>
+<li>
+<p><code>GenerateHint</code>从board计算hint并存入类成员变量hintRow和hintCol</p>
+</li>
+<li>
+<p><code>GenerateString</code>返回board的字符串表示， 0表示空， 1表示填色， 2表示不确定</p>
+</li>
+<li>
+<p><code>BoardHash</code>返回board的哈希值(Arrays.deepHashCode)， 用于dfs剪枝</p>
+</li>
+</ul>
+<h4 id="游戏求解">游戏求解</h4>
+<p>游戏的求解主要在两个类中实现， 即<code>Solver</code>和<code>SolveGame</code></p>
+<h5 id="solver类">Solver类：</h5>
+<p><img src="/media/solver.JPG" alt="solver"></p>
+<p>这个类中为求解所需要的各种操作， 包括生成标签，映射，向前和向后传播。</p>
+<p>其中主要的函数GenerateMap生成每个标签与可能在其之前/之后出现的标签的映射，实现如下：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="cm">/**
+</span><span class="cm">     * Generate a map of labeling, shift labeling by 1 or -1.
+</span><span class="cm">     * For example:
+</span><span class="cm">     * [-1, -1, 2, 3, 4, -5, -5, 6, 7, -8, -8] can be shifted by 1 to get a forward map
+</span><span class="cm">     * [-1, 2,  3, 4, -5, -5, 6, 7, -8, -8]
+</span><span class="cm">     * map: -1-&gt;-1, -1-&gt;2, 2-&gt;3, 3-&gt;4, ... -5-&gt;(-5,6), ...
+</span><span class="cm">     *
+</span><span class="cm">     * @param hint  hint list of one line
+</span><span class="cm">     * @param shift size of shift. Requires [-1, 1]
+</span><span class="cm">     * @return map
+</span><span class="cm">     * a map indicate what number can appear after/before cell n
+</span><span class="cm">     */</span>
+    <span class="kr">public</span> <span class="nx">Map</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="p">,</span> <span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;</span> <span class="nx">GenerateMap</span><span class="p">(</span><span class="nx">List</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">hint</span><span class="p">,</span> <span class="kr">int</span> <span class="nx">shift</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">labeling</span> <span class="o">=</span> <span class="nx">GenerateLabeling</span><span class="p">(</span><span class="nx">hint</span><span class="p">);</span>
+        <span class="nx">Map</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="p">,</span> <span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;</span> <span class="nx">map</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">labeling</span><span class="p">.</span><span class="nx">size</span><span class="p">();</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kr">int</span> <span class="nx">tmp_label</span> <span class="o">=</span> <span class="nx">labeling</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+            <span class="kr">int</span> <span class="nx">nxt_label</span><span class="p">;</span> <span class="c1">// shifted labeling
+</span><span class="c1"></span>            <span class="c1">// get shifted label if exists
+</span><span class="c1"></span>            <span class="k">try</span> <span class="p">{</span>
+                <span class="nx">nxt_label</span> <span class="o">=</span> <span class="nx">labeling</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">i</span> <span class="o">+</span> <span class="nx">shift</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">IndexOutOfBoundsException</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">continue</span><span class="p">;</span> <span class="c1">// no corresponding label, ignore
+</span><span class="c1"></span>            <span class="p">}</span>
+            <span class="c1">// add shifted label to current label&#39;s map set
+</span><span class="c1"></span>            <span class="k">if</span> <span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">containsKey</span><span class="p">(</span><span class="nx">tmp_label</span><span class="p">))</span> <span class="p">{</span> <span class="c1">// add to set
+</span><span class="c1"></span>                <span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">tmp_label</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">nxt_label</span><span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">// initialize a set
+</span><span class="c1"></span>                <span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">set</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+                <span class="nx">set</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">nxt_label</span><span class="p">);</span>
+                <span class="nx">map</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="nx">tmp_label</span><span class="p">,</span> <span class="nx">set</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span> <span class="c1">// end for
+</span><span class="c1"></span>        <span class="k">return</span> <span class="nx">map</span><span class="p">;</span>
+    <span class="p">}</span>
+</code></pre></div><p>ForwardPass实现如下， <code>available</code>记录每个单元格之后可能出现的标签集合， 遍历当前单元格标签，得到每个标签映射后的标签，取并集：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/**
+</span><span class="cm">
+</span><span class="cm"> * Forward pass one line, get possible next cell&#39;s labels by mapping current cell&#39;s labels, intersect them
+</span><span class="cm"> *
+</span><span class="cm"> * @param lineSet list of sets in one line
+</span><span class="cm"> * @param map     map of labels of this line
+</span><span class="cm"> * @return lineSet
+</span><span class="cm"> * list of sets after forward pass, each set contains the labels that could appear in one cell
+</span><span class="cm"> */</span>
+<span class="kr">public</span> <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;</span> <span class="nx">ForwardPass</span><span class="p">(</span><span class="nx">List</span><span class="o">&lt;</span><span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;</span> <span class="nx">lineSet</span><span class="p">,</span> <span class="nx">Map</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="p">,</span> <span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;</span> <span class="nx">map</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">available</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashSet</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">set</span> <span class="o">:</span> <span class="nx">lineSet</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">available</span><span class="p">.</span><span class="nx">isEmpty</span><span class="p">())</span> <span class="p">{</span> <span class="c1">// not first one
+</span><span class="c1"></span>            <span class="nx">set</span><span class="p">.</span><span class="nx">retainAll</span><span class="p">(</span><span class="nx">available</span><span class="p">);</span> <span class="c1">// intersect with available label
+</span><span class="c1"></span>            <span class="nx">available</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">:</span> <span class="nx">set</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">available</span><span class="p">.</span><span class="nx">addAll</span><span class="p">(</span><span class="nx">map</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">i</span><span class="p">));</span> <span class="c1">// available labels of next cell
+</span><span class="c1"></span>        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="nx">lineSet</span><span class="p">;</span>
+<span class="p">}</span>
+
+</code></pre></div><h5 id="solvegame类">SolveGame类：</h5>
+<p><img src="/media/solvegame.jpg" alt="solver"></p>
+<p>这个类实际求解游戏， 记录求解所需信息及结果。其需要记录的信息包括：</p>
+<ul>
+<li><code>rowListOfSet</code>: 行方向的标签集合，每个单元格有一个Set， 每行为Set的List，所有行即为Set的List的List</li>
+<li><code>colListOfSet</code>: 列方向的标签集合</li>
+<li><code>rowListOfMapForward</code>:行方向的标签映射，每行为Map的List</li>
+<li><code>vis</code>: String集合， 记录棋盘的哈希值</li>
+<li><code>solution</code>: 记录所有找到的解的字符串表示</li>
+<li><code>numSolution</code>: 找到的解的个数</li>
+<li><code>SOLUTION_NEED</code>: 解个数上限，对于较大的游戏，可能存在很多解，默认只找到前50个</li>
+</ul>
+<p>函数：</p>
+<ul>
+<li><code>InitBoardState</code>: 初始化标签集合和映射关系</li>
+<li><code>DeductBoard</code>: 填充只有正/负标签的单元格</li>
+<li><code>DeductLabel</code>: 削减被填充的单元格标签，返回boolean表示是否有标签被削减</li>
+<li><code>PassBoard</code>: 进行向前，向后传播</li>
+<li><code>SolvePipeline</code>: 确定性求解，包含上面三个过程</li>
+<li><code>Guess</code>: dfs求解</li>
+</ul>
+<p>SolvePipeline:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="cm">/**
+</span><span class="cm">     * Solve pipeline, run until no cell changes state, it&#39;s deterministic
+</span><span class="cm">     */</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">SolvePipeline</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nb">Boolean</span> <span class="nx">changed</span> <span class="o">=</span> <span class="nb">Boolean</span><span class="p">.</span><span class="nx">TRUE</span><span class="p">;</span>
+        <span class="k">while</span> <span class="p">(</span><span class="nx">changed</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">DeductBoard</span><span class="p">();</span>
+            <span class="nx">changed</span> <span class="o">=</span> <span class="nx">DeductLabel</span><span class="p">();</span>
+            <span class="nx">PassBoard</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div><p>Guess:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="cm">/**
+</span><span class="cm">     * For game with multiple solutions, guess is needed, use dfs search
+</span><span class="cm">     */</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">Guess</span><span class="p">(){</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">vis</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="nx">BoardHash</span><span class="p">())){</span> <span class="c1">// board occurred
+</span><span class="c1"></span>            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="nx">vis</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">BoardHash</span><span class="p">());</span> <span class="c1">// mark board as visited
+</span><span class="c1"></span>        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">IsSolved</span><span class="p">()){</span>
+            <span class="nx">numSolution</span> <span class="o">++</span><span class="p">;</span>
+            <span class="nb">String</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">GenerateString</span><span class="p">();</span>
+            <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&#34;solution &#34;</span> <span class="o">+</span> <span class="nx">numSolution</span> <span class="o">+</span> <span class="s2">&#34;:&#34;</span> <span class="o">+</span> <span class="nx">s</span><span class="p">);</span>
+            <span class="nx">solution</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span> <span class="c1">// record solution by string representation
+</span><span class="c1"></span>            <span class="nx">ShowBoard</span><span class="p">();</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="c1">// find unknown cells
+</span><span class="c1"></span>        <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">BOARD_SIZE_ROW</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">BOARD_SIZE_COL</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">set</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashSet</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="nx">rowListOfSet</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="nx">j</span><span class="p">));</span>
+                <span class="k">if</span><span class="p">(</span><span class="nx">set</span><span class="p">.</span><span class="nx">size</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">){</span>
+                    <span class="c1">// store current state
+</span><span class="c1"></span>                    <span class="nx">CellState</span><span class="p">[][]</span> <span class="nx">recBoard</span> <span class="o">=</span> <span class="nx">deepCopy</span><span class="p">(</span><span class="nx">board</span><span class="p">);</span>
+                    <span class="nx">List</span><span class="o">&lt;</span><span class="nx">List</span><span class="o">&lt;</span><span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;&gt;</span> <span class="nx">recRowListOfSet</span> <span class="o">=</span> <span class="nx">CopySetList</span><span class="p">(</span><span class="nx">rowListOfSet</span><span class="p">);</span>
+                    <span class="nx">List</span><span class="o">&lt;</span><span class="nx">List</span><span class="o">&lt;</span><span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;&gt;</span> <span class="nx">recColListOfSet</span> <span class="o">=</span> <span class="nx">CopySetList</span><span class="p">(</span><span class="nx">colListOfSet</span><span class="p">);</span>
+
+                    <span class="c1">// loop possible value of one cell
+</span><span class="c1"></span>                    <span class="k">for</span><span class="p">(</span><span class="kr">int</span> <span class="nx">k</span><span class="o">:</span> <span class="nx">set</span><span class="p">){</span>
+                        <span class="nx">rowListOfSet</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="nx">j</span><span class="p">).</span><span class="nx">clear</span><span class="p">();</span>
+                        <span class="nx">rowListOfSet</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="nx">j</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="nx">k</span><span class="p">);</span>
+                        <span class="nx">SolvePipeline</span><span class="p">();</span>
+                        <span class="nx">Guess</span><span class="p">();</span> <span class="c1">// recursive call
+</span><span class="c1"></span>    
+                        <span class="c1">// there might be hundreds of solutions, comment this line to find them all
+</span><span class="c1"></span>                        <span class="c1">// it can be time consuming, make sure the amount of solution is limited
+</span><span class="c1"></span>                        <span class="c1">// 50(default) solution is enough for most cases
+</span><span class="c1"></span>                        <span class="k">if</span><span class="p">(</span><span class="nx">numSolution</span> <span class="o">&gt;=</span> <span class="nx">SOLUTION_NEED</span><span class="p">)</span><span class="k">return</span><span class="p">;</span>
+
+
+                        <span class="c1">// drop changed lists and rollback, let garbage collector do the job
+</span><span class="c1"></span>                        <span class="nx">rowListOfSet</span> <span class="o">=</span> <span class="nx">recRowListOfSet</span><span class="p">;</span>
+                        <span class="nx">colListOfSet</span> <span class="o">=</span> <span class="nx">recColListOfSet</span><span class="p">;</span>
+    
+                        <span class="nx">board</span> <span class="o">=</span> <span class="nx">recBoard</span><span class="p">;</span>
+    
+                    <span class="p">}</span> <span class="c1">// end label value for
+</span><span class="c1"></span>                <span class="p">}</span> 
+            <span class="p">}</span> <span class="c1">// end col for
+</span><span class="c1"></span>        <span class="p">}</span><span class="c1">// end row for
+</span><span class="c1"></span>    <span class="p">}</span>
+</code></pre></div><p>至此，主要的程序实现说明就结束了，JavaDoc在file文件夹中。下面简要说一下测试及性能。</p>
+<h3 id="测试">测试</h3>
+<p>测试主要针对Solver类和SolveGame类</p>
+<h4 id="solvertest">SolverTest</h4>
+<p>GenerateLabeling:</p>
+<p>测试包含空行， 满行及任意其他情况</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="c1">// covers hint = [1]
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="k">void</span> <span class="nx">TestLabeling1</span><span class="p">(){</span>
+        <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">hint</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="nx">hint</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">labeling</span><span class="p">;</span>
+        <span class="nx">labeling</span> <span class="o">=</span> <span class="nx">Arrays</span><span class="p">.</span><span class="nx">asList</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span>
+        <span class="nx">assertEquals</span><span class="p">(</span><span class="nx">labeling</span><span class="p">,</span> <span class="nx">solver</span><span class="p">.</span><span class="nx">GenerateLabeling</span><span class="p">(</span><span class="nx">hint</span><span class="p">));</span>
+    <span class="p">}</span>
+</code></pre></div><p>GenerateMap分别测试-1，1偏移, hint如上包含不同情况</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// covers shift = -1
+</span><span class="c1"></span>    <span class="c1">// map {-1=[-1], 2=[-1], 3=[2], 4=[3], -5=[4, -5], 6=[-5], 7=[6], 8=[7], 9=[8], -10=[9, -10]}
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="k">void</span> <span class="nx">TestGenerateMapPrevious</span><span class="p">(){</span>
+        <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">hint</span><span class="p">;</span>
+        <span class="nx">hint</span> <span class="o">=</span> <span class="nx">Arrays</span><span class="p">.</span><span class="nx">asList</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">solver</span><span class="p">.</span><span class="nx">GenerateMap</span><span class="p">(</span><span class="nx">hint</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">));</span>
+    <span class="p">}</span>
+</code></pre></div><p>InitLine也针对hint进行测试，覆盖不同参数isRow布尔值：</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">// covers hint = []
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="k">void</span> <span class="nx">TestInitLineEmpty</span><span class="p">(){</span>
+        <span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">hint</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">solver</span><span class="p">.</span><span class="nx">InitLine</span><span class="p">(</span><span class="nx">hint</span><span class="p">,</span> <span class="nb">Boolean</span><span class="p">.</span><span class="nx">FALSE</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="c1">// covers hint = [1]
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="k">void</span> <span class="nx">TestInitLineOne</span><span class="p">(){</span>
+        <span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">hint</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="nx">hint</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">solver</span><span class="p">.</span><span class="nx">InitLine</span><span class="p">(</span><span class="nx">hint</span><span class="p">,</span> <span class="nb">Boolean</span><span class="p">.</span><span class="nx">TRUE</span><span class="p">));</span>
+    <span class="p">}</span>
+
+<span class="c1">// covers hint = [10]
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="k">void</span> <span class="nx">TestInitLineFull</span><span class="p">(){</span>
+        <span class="nx">ArrayList</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">hint</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="nx">hint</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">solver</span><span class="p">.</span><span class="nx">InitLine</span><span class="p">(</span><span class="nx">hint</span><span class="p">,</span> <span class="nb">Boolean</span><span class="p">.</span><span class="nx">FALSE</span><span class="p">));</span>
+    <span class="p">}</span>
+</code></pre></div><p>ForwardPass:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="err">@</span><span class="nx">Test</span>
+    <span class="k">void</span> <span class="nx">forwardPass</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">hint</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+        <span class="nx">hint</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+        <span class="nx">hint</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+        <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;</span> <span class="nx">labeling</span> <span class="o">=</span> <span class="nx">solver</span><span class="p">.</span><span class="nx">GenerateLabeling</span><span class="p">(</span><span class="nx">hint</span><span class="p">);</span>
+        <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;</span> <span class="nx">lineSet</span> <span class="o">=</span> <span class="nx">solver</span><span class="p">.</span><span class="nx">InitLine</span><span class="p">(</span><span class="nx">hint</span><span class="p">,</span> <span class="nb">Boolean</span><span class="p">.</span><span class="nx">FALSE</span><span class="p">);</span>
+        <span class="nx">Map</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="p">,</span> <span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;</span> <span class="nx">map</span> <span class="o">=</span> <span class="nx">solver</span><span class="p">.</span><span class="nx">GenerateMap</span><span class="p">(</span><span class="nx">labeling</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+        <span class="nx">lineSet</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">remove</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+        <span class="nx">List</span><span class="o">&lt;</span><span class="nx">Set</span><span class="o">&lt;</span><span class="nx">Integer</span><span class="o">&gt;&gt;</span> <span class="nx">lineSetPassed</span> <span class="o">=</span> <span class="nx">solver</span><span class="p">.</span><span class="nx">ForwardPass</span><span class="p">(</span><span class="nx">lineSet</span><span class="p">,</span> <span class="nx">map</span><span class="p">);</span>
+        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="nx">lineSetPassed</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div><h4 id="solvegametest">SolveGameTest</h4>
+<p>直接从图片生成hint，再求解，比对二者board是否一致，多个解的测试主要记录时间</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="c1">// square board
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">CombinedTestSquare</span><span class="p">()</span> <span class="kr">throws</span> <span class="nx">IOException</span> <span class="p">{</span>
+        <span class="nx">GameState</span> <span class="nx">state</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GameState</span><span class="p">(</span><span class="s2">&#34;D:/learn/2020_9/software/img/einstein.jpg&#34;</span><span class="p">,</span>
+                <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+
+        <span class="nx">SolveGame</span> <span class="nx">solveGame</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SolveGame</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">hintRow</span><span class="p">,</span> <span class="nx">state</span><span class="p">.</span><span class="nx">hintCol</span><span class="p">,</span>
+                <span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>
+
+        <span class="nx">SolveAndClock</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">solveGame</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// rectangle board
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">CombinedTestRec</span><span class="p">()</span> <span class="kr">throws</span> <span class="nx">IOException</span> <span class="p">{</span>
+        <span class="nx">GameState</span> <span class="nx">state</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GameState</span><span class="p">(</span><span class="s2">&#34;D:/learn/2020_9/software/img/einstein.jpg&#34;</span><span class="p">,</span>
+                <span class="mi">50</span><span class="p">,</span> <span class="mi">51</span><span class="p">);</span>
+
+        <span class="nx">SolveGame</span> <span class="nx">solveGame</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SolveGame</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">hintRow</span><span class="p">,</span> <span class="nx">state</span><span class="p">.</span><span class="nx">hintCol</span><span class="p">,</span>
+                <span class="mi">50</span><span class="p">,</span> <span class="mi">51</span><span class="p">);</span>
+
+        <span class="nx">SolveAndClock</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">solveGame</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// multiple solutions 40*40
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">CombinedTestMultiMid</span><span class="p">()</span> <span class="kr">throws</span> <span class="nx">IOException</span> <span class="p">{</span>
+        <span class="nx">GameState</span> <span class="nx">state</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GameState</span><span class="p">(</span><span class="s2">&#34;D:/learn/2020_9/software/img/einstein.jpg&#34;</span><span class="p">,</span>
+                <span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span>
+
+        <span class="nx">SolveGame</span> <span class="nx">solveGame</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SolveGame</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">hintRow</span><span class="p">,</span> <span class="nx">state</span><span class="p">.</span><span class="nx">hintCol</span><span class="p">,</span>
+                <span class="mi">40</span><span class="p">,</span> <span class="mi">40</span><span class="p">);</span>
+
+        <span class="nx">GuessAndClock</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">solveGame</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// multiple solutions 100*70
+</span><span class="c1"></span>    <span class="err">@</span><span class="nx">Test</span>
+    <span class="kr">public</span> <span class="k">void</span> <span class="nx">CombinedTestMultiRec</span><span class="p">()</span> <span class="kr">throws</span> <span class="nx">IOException</span> <span class="p">{</span>
+        <span class="nx">GameState</span> <span class="nx">state</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">GameState</span><span class="p">(</span><span class="s2">&#34;D:/learn/2020_9/software/img/einstein.jpg&#34;</span><span class="p">,</span>
+                <span class="mi">100</span><span class="p">,</span> <span class="mi">70</span><span class="p">);</span>
+
+        <span class="nx">SolveGame</span> <span class="nx">solveGame</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">SolveGame</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">hintRow</span><span class="p">,</span> <span class="nx">state</span><span class="p">.</span><span class="nx">hintCol</span><span class="p">,</span>
+                <span class="mi">100</span><span class="p">,</span> <span class="mi">70</span><span class="p">);</span>
+
+        <span class="nx">GuessAndClock</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">solveGame</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+    <span class="kr">private</span> <span class="k">void</span> <span class="nx">SolveAndClock</span><span class="p">(</span><span class="nx">GameState</span> <span class="nx">state</span><span class="p">,</span> <span class="nx">SolveGame</span> <span class="nx">solveGame</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">long</span> <span class="nx">startTime</span> <span class="o">=</span> <span class="nx">System</span><span class="p">.</span><span class="nx">nanoTime</span><span class="p">();</span>
+
+        <span class="nx">solveGame</span><span class="p">.</span><span class="nx">SolvePipeline</span><span class="p">();</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">solveGame</span><span class="p">.</span><span class="nx">ErrorState</span><span class="p">()){</span>
+            <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&#34;Not valid game!&#34;</span><span class="p">);</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kr">long</span> <span class="nx">endTime</span> <span class="o">=</span> <span class="nx">System</span><span class="p">.</span><span class="nx">nanoTime</span><span class="p">();</span>
+        <span class="kr">long</span> <span class="nx">duration</span> <span class="o">=</span> <span class="p">(</span><span class="nx">endTime</span> <span class="o">-</span> <span class="nx">startTime</span><span class="p">)</span><span class="o">/</span><span class="mi">1000000</span><span class="p">;</span>  <span class="c1">//divide by 1000000 to get milliseconds.
+</span><span class="c1"></span>        <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">&#34;solve completed in &#34;</span> <span class="o">+</span> <span class="nx">duration</span> <span class="o">+</span> <span class="s2">&#34;ms&#34;</span><span class="p">);</span>
+
+        <span class="nx">assertArrayEquals</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">board</span><span class="p">,</span> <span class="nx">solveGame</span><span class="p">.</span><span class="nx">board</span><span class="p">);</span>
+    <span class="p">}</span>
+</code></pre></div><p>详细coverage report在file文件夹中</p>
+<p><img src="/media/coverage.JPG" alt="coverage"></p>
+<h3 id="性能">性能</h3>
+<p>测试了不同规模的游戏求解时间，第二列为确定性求解时间，第三列dfs找到50个解的总时间受未确定的单元格数量影响较大，有些图片生成的游戏可能随规模增大不确定格数增加，这里仅作为参考。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">board size</th>
+<th style="text-align:center">deterministic solver</th>
+<th style="text-align:center">dfs 50 solutions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">10*5</td>
+<td style="text-align:center">0.008 s</td>
+<td style="text-align:center">None</td>
+</tr>
+<tr>
+<td style="text-align:center">40*40</td>
+<td style="text-align:center">0.27 s</td>
+<td style="text-align:center">None</td>
+</tr>
+<tr>
+<td style="text-align:center">50*50</td>
+<td style="text-align:center">0.45 s</td>
+<td style="text-align:center">None</td>
+</tr>
+<tr>
+<td style="text-align:center">100*70</td>
+<td style="text-align:center">0.68 s</td>
+<td style="text-align:center">6.98 s</td>
+</tr>
+<tr>
+<td style="text-align:center">100*100</td>
+<td style="text-align:center">0.93 s</td>
+<td style="text-align:center">12.43 s</td>
+</tr>
+<tr>
+<td style="text-align:center">200*100</td>
+<td style="text-align:center">1.68 s</td>
+<td style="text-align:center">21.73 s</td>
+</tr>
+<tr>
+<td style="text-align:center">200*200</td>
+<td style="text-align:center">5.28 s</td>
+<td style="text-align:center">95.59 s</td>
+</tr>
+</tbody>
+</table>
+<p>唯一解游戏的flame graph:</p>
+<p><img src="/media/flamegraph_uniq.png" alt="flamegraph_dfs"></p>
+<p>不唯一：</p>
+<p>主要在于dfs的不断调用</p>
+<p><img src="/media/flamegraph_multisolution.png" alt="flamegraph_dfs"></p>
+<h4 id="psp">PSP</h4>
+<table>
+<thead>
+<tr>
+<th>PSP2.1</th>
+<th>Personal Software Process Stages</th>
+<th>预估耗时（分钟）</th>
+<th>实际耗时（分钟）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planning</td>
+<td>计划</td>
+<td>240</td>
+<td>300</td>
+</tr>
+<tr>
+<td>· Estimate</td>
+<td>· 估计这个任务需要多少时间</td>
+<td>30</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Development</td>
+<td>开发</td>
+<td>2500</td>
+<td>2800</td>
+</tr>
+<tr>
+<td>· Analysis</td>
+<td>· 需求分析 (包括学习新技术)</td>
+<td>360</td>
+<td>600</td>
+</tr>
+<tr>
+<td>· Design Spec</td>
+<td>· 生成设计文档</td>
+<td>60</td>
+<td>60</td>
+</tr>
+<tr>
+<td>· Design Review</td>
+<td>· 设计复审 (和同事审核设计文档)</td>
+<td>60</td>
+<td>60</td>
+</tr>
+<tr>
+<td>· Coding Standard</td>
+<td>· 代码规范 (为目前的开发制定合适的规范)</td>
+<td>20</td>
+<td>30</td>
+</tr>
+<tr>
+<td>· Design</td>
+<td>· 具体设计</td>
+<td>360</td>
+<td>240</td>
+</tr>
+<tr>
+<td>· Coding</td>
+<td>· 具体编码</td>
+<td>500</td>
+<td>500</td>
+</tr>
+<tr>
+<td>· Code Review</td>
+<td>· 代码复审</td>
+<td>120</td>
+<td>100</td>
+</tr>
+<tr>
+<td>· Test</td>
+<td>· 测试（自我测试，修改代码，提交修改）</td>
+<td>120</td>
+<td>240</td>
+</tr>
+<tr>
+<td>Reporting</td>
+<td>报告</td>
+<td>360</td>
+<td>240</td>
+</tr>
+<tr>
+<td>· Test Report</td>
+<td>· 测试报告</td>
+<td>60</td>
+<td>50</td>
+</tr>
+<tr>
+<td>· Size Measurement</td>
+<td>· 计算工作量</td>
+<td>30</td>
+<td>30</td>
+</tr>
+<tr>
+<td>· Postmortem &amp; Process Improvement Plan</td>
+<td>· 事后总结, 并提出过程改进计划</td>
+<td>30</td>
+<td>40</td>
+</tr>
+<tr>
+<td></td>
+<td>合计</td>
+<td>4850</td>
+<td>5320</td>
+</tr>
+</tbody>
+</table>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://Xieemily.github.io/tags/nonogram/">nonogram</a>&nbsp;
+            
+              <a href="https://Xieemily.github.io/tags/java/">java</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fXieemily.github.io%2fpost%2fnonogram2%2f&amp;text=Nonogram%20Solver%202&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fXieemily.github.io%2fpost%2fnonogram2%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fXieemily.github.io%2fpost%2fnonogram2%2f&amp;title=Nonogram%20Solver%202" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fXieemily.github.io%2fpost%2fnonogram2%2f&amp;title=Nonogram%20Solver%202" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fXieemily.github.io%2fpost%2fnonogram2%2f&amp;title=Nonogram%20Solver%202" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fXieemily.github.io%2fpost%2fnonogram2%2f&amp;description=Nonogram%20Solver%202" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/test_post/">Nonogram Solver 1</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://Xieemily.github.io/post/test_post/" data-toggle="tooltip" data-placement="top" title="Nonogram Solver 1">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://Xieemily.github.io/post/lane/" data-toggle="tooltip" data-placement="top" title="Lane Detect">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:xie.mengying@yahoo.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Xieemily" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              Mengying.Xie
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2021
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://Xieemily.github.io">Xieemily Blog Site</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.80.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://Xieemily.github.io/js/main.js"></script>
+<script src="https://Xieemily.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://Xieemily.github.io/js/load-photoswipe.js"></script>
+
+
+
+<script>
+  (function() {
+    var cx = '012345678901234567890:abcdefghijk';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

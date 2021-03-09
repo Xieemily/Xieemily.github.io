@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Xieemily Blog Site</title>
+    <link>https://Xieemily.github.io/tags/</link>
+    <description>Recent content in Tags on Xieemily Blog Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>xie.mengying@yahoo.com (Mengying.Xie)</managingEditor>
+    <webMaster>xie.mengying@yahoo.com (Mengying.Xie)</webMaster>
+    <lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://Xieemily.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://Xieemily.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <author>xie.mengying@yahoo.com (Mengying.Xie)</author>
+      <guid>https://Xieemily.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>image process</title>
+      <link>https://Xieemily.github.io/tags/image-process/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <author>xie.mengying@yahoo.com (Mengying.Xie)</author>
+      <guid>https://Xieemily.github.io/tags/image-process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lane detect</title>
+      <link>https://Xieemily.github.io/tags/lane-detect/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      <author>xie.mengying@yahoo.com (Mengying.Xie)</author>
+      <guid>https://Xieemily.github.io/tags/lane-detect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://Xieemily.github.io/tags/java/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      <author>xie.mengying@yahoo.com (Mengying.Xie)</author>
+      <guid>https://Xieemily.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nonogram</title>
+      <link>https://Xieemily.github.io/tags/nonogram/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      <author>xie.mengying@yahoo.com (Mengying.Xie)</author>
+      <guid>https://Xieemily.github.io/tags/nonogram/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
