@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Chess AI</title>
+      <link>https://Xieemily.github.io/post/chess/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <author>xie.mengying@yahoo.com (Mengying.Xie)</author>
+      <guid>https://Xieemily.github.io/post/chess/</guid>
+      <description>&lt;p&gt;五子棋棋盘落子位置检测，蒙特卡洛搜索及强化学习AI，人工智能课程大作业，人为设定函数的alpha-beta剪枝没来得及做，有点离谱。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>About me</title>
       <link>https://Xieemily.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

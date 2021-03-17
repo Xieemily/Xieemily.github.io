@@ -38,5 +38,14 @@
 &lt;p&gt;Nonograms是一种逻辑性图片益智游戏，玩家根据网格旁的数字，将网格中的方格填色或留空，从而展现一副隐藏的图画。本文详细描述了Nonogram求解的方法。&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Chess AI</title>
+      <link>https://Xieemily.github.io/post/chess/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      <author>xie.mengying@yahoo.com (Mengying.Xie)</author>
+      <guid>https://Xieemily.github.io/post/chess/</guid>
+      <description>&lt;p&gt;五子棋棋盘落子位置检测，蒙特卡洛搜索及强化学习AI，人工智能课程大作业，人为设定函数的alpha-beta剪枝没来得及做，有点离谱。&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
