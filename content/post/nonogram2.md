@@ -21,8 +21,6 @@ tags: ["nonogram", "java"]
 
 程序包含如下六个类：
 
-![](/media/class_relation.jpg)
-
 - `ImgProcess`: 将输入图片转化为二值
 
 - `GameState`: 记录游戏棋盘及数字提示
@@ -33,7 +31,6 @@ tags: ["nonogram", "java"]
 
 - `FileIO`: 文件创建及读写
 
-- `Main`
 
 #### 图像转化为游戏
 
