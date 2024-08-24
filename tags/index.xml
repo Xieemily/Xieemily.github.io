@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Beautiful Hugo</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Beautiful Hugo</description>
+    <title>Tags on blog</title>
+    <link>https://xieemily.github.io/tags/</link>
+    <description>Recent content in Tags on blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>xie_my_emily@163.com (Xieemily)</managingEditor>
     <webMaster>xie_my_emily@163.com (Xieemily)</webMaster>
     <lastBuildDate>Tue, 18 Jun 2024 20:22:47 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://xieemily.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Screenwriting</title>
-      <link>http://localhost:1313/tags/screenwriting/</link>
+      <link>https://xieemily.github.io/tags/screenwriting/</link>
       <pubDate>Tue, 18 Jun 2024 20:22:47 +0800</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
-      <guid>http://localhost:1313/tags/screenwriting/</guid>
+      <guid>https://xieemily.github.io/tags/screenwriting/</guid>
       <description></description>
     </item>
     <item>
       <title>C&#43;&#43;</title>
-      <link>http://localhost:1313/tags/c&#43;&#43;/</link>
+      <link>https://xieemily.github.io/tags/c&#43;&#43;/</link>
       <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
-      <guid>http://localhost:1313/tags/c&#43;&#43;/</guid>
+      <guid>https://xieemily.github.io/tags/c&#43;&#43;/</guid>
       <description></description>
     </item>
     <item>
       <title>Image Process</title>
-      <link>http://localhost:1313/tags/image-process/</link>
+      <link>https://xieemily.github.io/tags/image-process/</link>
       <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
-      <guid>http://localhost:1313/tags/image-process/</guid>
+      <guid>https://xieemily.github.io/tags/image-process/</guid>
       <description></description>
     </item>
     <item>
       <title>Lane Detect</title>
-      <link>http://localhost:1313/tags/lane-detect/</link>
+      <link>https://xieemily.github.io/tags/lane-detect/</link>
       <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
-      <guid>http://localhost:1313/tags/lane-detect/</guid>
+      <guid>https://xieemily.github.io/tags/lane-detect/</guid>
       <description></description>
     </item>
     <item>
       <title>Java</title>
-      <link>http://localhost:1313/tags/java/</link>
+      <link>https://xieemily.github.io/tags/java/</link>
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
-      <guid>http://localhost:1313/tags/java/</guid>
+      <guid>https://xieemily.github.io/tags/java/</guid>
       <description></description>
     </item>
     <item>
       <title>Nonogram</title>
-      <link>http://localhost:1313/tags/nonogram/</link>
+      <link>https://xieemily.github.io/tags/nonogram/</link>
       <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
-      <guid>http://localhost:1313/tags/nonogram/</guid>
+      <guid>https://xieemily.github.io/tags/nonogram/</guid>
       <description></description>
     </item>
   </channel>
