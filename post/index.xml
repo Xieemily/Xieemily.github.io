@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Xieemily Blog Site</title>
-    <link>https://Xieemily.github.io/post/</link>
-    <description>Recent content in Posts on Xieemily Blog Site</description>
+    <title>Posts on Beautiful Hugo</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Beautiful Hugo</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>xie.mengying@yahoo.com (Mengying.Xie)</managingEditor>
-    <webMaster>xie.mengying@yahoo.com (Mengying.Xie)</webMaster>
+    <managingEditor>xie_my_emily@163.com (Xieemily)</managingEditor>
+    <webMaster>xie_my_emily@163.com (Xieemily)</webMaster>
     <lastBuildDate>Tue, 18 Jun 2024 20:22:47 +0800</lastBuildDate>
-    <atom:link href="https://Xieemily.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>?</title>
-      <link>https://Xieemily.github.io/post/summary/</link>
-      <pubDate>Tue, 18 Jun 2024 20:22:47 +0800</pubDate><author>xie.mengying@yahoo.com (Mengying.Xie)</author>
-      <guid>https://Xieemily.github.io/post/summary/</guid>
+      <link>http://localhost:1313/post/summary/</link>
+      <pubDate>Tue, 18 Jun 2024 20:22:47 +0800</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
+      <guid>http://localhost:1313/post/summary/</guid>
       <description>&lt;p&gt;上次更新博客还是大三。&lt;/p&gt;&#xA;&lt;p&gt;本文和技术无关。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lane Detect</title>
-      <link>https://Xieemily.github.io/post/lane/</link>
-      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><author>xie.mengying@yahoo.com (Mengying.Xie)</author>
-      <guid>https://Xieemily.github.io/post/lane/</guid>
+      <link>http://localhost:1313/post/lane/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
+      <guid>http://localhost:1313/post/lane/</guid>
       <description>&lt;p&gt;使用数字图像的基础方法进行车道线检测（概率霍夫+聚类），不调用opencv相关算法，在&lt;strong&gt;TuSimple Lane Dataset&lt;/strong&gt;评测。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nonogram Solver 2</title>
-      <link>https://Xieemily.github.io/post/nonogram2/</link>
-      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate><author>xie.mengying@yahoo.com (Mengying.Xie)</author>
-      <guid>https://Xieemily.github.io/post/nonogram2/</guid>
-      <description>&lt;p&gt;这篇博客介绍程序实现。&lt;/p&gt;&#xA;&lt;p&gt;程序的运行说明及命令行参数见README.md&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://Xieemily.github.io/media/einstein_game.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+      <link>http://localhost:1313/post/nonogram2/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
+      <guid>http://localhost:1313/post/nonogram2/</guid>
+      <description>&lt;p&gt;这篇博客介绍程序实现。&lt;/p&gt;&#xA;&lt;p&gt;程序的运行说明及命令行参数见README.md&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/media/einstein_game.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Nonogram Solver 1</title>
-      <link>https://Xieemily.github.io/post/test_post/</link>
-      <pubDate>Mon, 01 Feb 2021 00:47:27 +0800</pubDate><author>xie.mengying@yahoo.com (Mengying.Xie)</author>
-      <guid>https://Xieemily.github.io/post/test_post/</guid>
+      <link>http://localhost:1313/post/test_post/</link>
+      <pubDate>Mon, 01 Feb 2021 00:47:27 +0800</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
+      <guid>http://localhost:1313/post/test_post/</guid>
       <description>&lt;p&gt;​&lt;/p&gt;&#xA;&lt;p&gt;Nonograms是一种逻辑性图片益智游戏，玩家根据网格旁的数字，将网格中的方格填色或留空，从而展现一副隐藏的图画。本文详细描述了Nonogram求解的方法。&lt;/p&gt;</description>
     </item>
   </channel>
