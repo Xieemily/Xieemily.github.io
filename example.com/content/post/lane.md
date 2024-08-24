@@ -15,9 +15,9 @@ tags: ["c++", "image process", "lane detect"]
 
 数字图像处理课程的大作业，要求c++实现，不能使用神经网络，除输入输出外不调用opencv库。
 
-![](/media/lane/src.png)
+![](/img/lane/src.png)
 
-![](/media/lane/res.png)
+![](/img/lane/res.png)
 
 ### 程序思路
 
@@ -71,14 +71,14 @@ tags: ["c++", "image process", "lane detect"]
 
 原图：
 
-![](/media/lane/src.png)
+![](/img/lane/src.png)
 
 灰度图：
 
-![](/media/lane/gray.png)
+![](/img/lane/gray.png)
 
 计算阈值并遮盖天空后：
-![](/media/lane/white_threshold.png)
+![](/img/lane/white_threshold.png)
 
 
 
@@ -250,7 +250,7 @@ for (int p = 0; p < cluster.size(); p++) {
 
 红色为霍夫直线，绿色为聚类后直线
 
-![](/media/lane/res.png)
+![](/img/lane/res.png)
 
 输出时截掉上半部分直线。
 
@@ -260,15 +260,15 @@ for (int p = 0; p < cluster.size(); p++) {
 
 对于光照条件正常，车道线清晰的情况比较准确：
 
-![](/media/lane/good.png)
+![](/img/lane/good.png)
 
-![](/media/lane/good2.png)
+![](/img/lane/good2.png)
 
 如果地面没有白色线或间距大，没办法检测出(右侧第二根):
 
 
-![](/media/lane/no_white.png)
+![](/img/lane/no_white.png)
 
 此方法也没有考虑弯道：
 
-![](/media/lane/curve.png)
+![](/img/lane/curve.png)
