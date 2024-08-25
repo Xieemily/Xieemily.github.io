@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Image Process on blog</title>
+    <link>https://xieemily.github.io/tags/image-process/</link>
+    <description>Recent content in Image Process on blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>xie_my_emily@163.com (Xieemily)</managingEditor>
+    <webMaster>xie_my_emily@163.com (Xieemily)</webMaster>
+    <lastBuildDate>Sun, 12 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://xieemily.github.io/tags/image-process/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chess AI</title>
+      <link>https://xieemily.github.io/post/chess/</link>
+      <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
+      <guid>https://xieemily.github.io/post/chess/</guid>
+      <description>&lt;p&gt;棋盘落子位置检测，蒙特卡洛搜索及强化学习，人工智能课程大作业，人为设定函数的alpha-beta剪枝没来得及做，有点离谱。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lane Detect</title>
+      <link>https://xieemily.github.io/post/lane/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
+      <guid>https://xieemily.github.io/post/lane/</guid>
+      <description>&lt;p&gt;使用数字图像的基础方法进行车道线检测（概率霍夫+聚类），不调用opencv相关算法，在&lt;strong&gt;TuSimple Lane Dataset&lt;/strong&gt;评测。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
