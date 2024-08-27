@@ -2,34 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://xieemily.github.io/post/summary/</loc>
-    <lastmod>2024-06-18T20:22:47+08:00</lastmod>
-  </url><url>
     <loc>https://xieemily.github.io/</loc>
     <lastmod>2024-06-18T20:22:47+08:00</lastmod>
   </url><url>
     <loc>https://xieemily.github.io/post/</loc>
     <lastmod>2024-06-18T20:22:47+08:00</lastmod>
   </url><url>
-    <loc>https://xieemily.github.io/tags/screenwriting/</loc>
-    <lastmod>2024-06-18T20:22:47+08:00</lastmod>
-  </url><url>
-    <loc>https://xieemily.github.io/tags/</loc>
-    <lastmod>2024-06-18T20:22:47+08:00</lastmod>
-  </url><url>
     <loc>https://xieemily.github.io/tags/c&#43;&#43;/</loc>
-    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://xieemily.github.io/post/chess/</loc>
-    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xieemily.github.io/tags/image-process/</loc>
-    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xieemily.github.io/tags/lane-detect/</loc>
-    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xieemily.github.io/post/lane/</loc>
+    <lastmod>2021-02-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://xieemily.github.io/tags/</loc>
     <lastmod>2021-02-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xieemily.github.io/tags/java/</loc>
@@ -43,6 +34,9 @@
   </url><url>
     <loc>https://xieemily.github.io/post/test_post/</loc>
     <lastmod>2021-02-01T00:47:27+08:00</lastmod>
+  </url><url>
+    <loc>https://xieemily.github.io/post/chess/</loc>
+    <lastmod>2020-12-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://xieemily.github.io/page/about/</loc>
   </url><url>
