@@ -65,7 +65,7 @@
   "headline": "Nonogram Solver 1",
   "description" : "​\nNonograms是一种逻辑性图片益智游戏，玩家根据网格旁的数字，将网格中的方格填色或留空，从而展现一副隐藏的图画。本文详细描述了Nonogram求解的方法。\n",
   "inLanguage" : "en",
-  "wordCount":  277 ,
+  "wordCount":  282 ,
   "datePublished" : "2021-02-01T00:47:27\u002b08:00",
   "dateModified" : "2021-02-01T00:47:27\u002b08:00",
   "image" : "https:\/\/xieemily.github.io\/img\/avatar-icon.png",
@@ -254,7 +254,7 @@
     &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;2&nbsp;minutes
   
   
-    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;277&nbsp;words
+    &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;282&nbsp;words
   
   
     
@@ -392,16 +392,16 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">visitedBoard</span><span class="p">){</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="p">;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">mark</span><span class="w"> </span><span class="n">board</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">visited</span><span class="p">;</span><span class="c1">// use hash</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">mark</span><span class="w"> </span><span class="n">board</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="n">visited</span><span class="p">;</span><span class="w"> </span><span class="c1">// use hash</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">game</span><span class="w"> </span><span class="n">solved</span><span class="p">)</span><span class="k">return</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">cell</span><span class="p">:</span><span class="w"> </span><span class="n">board</span><span class="p">){</span><span class="c1">// iterate through board cells</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">cell</span><span class="p">:</span><span class="w"> </span><span class="n">board</span><span class="p">){</span><span class="w"> </span><span class="c1">// iterate through board cells</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">cell</span><span class="w"> </span><span class="n">has</span><span class="w"> </span><span class="n">multiple</span><span class="w"> </span><span class="n">label</span><span class="p">){</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kd">record</span> <span class="err">=</span> <span class="nc">current</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="c1">// record current board and labels</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">cell_label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">labels</span><span class="p">);</span><span class="c1">// select one label</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kd">record</span> <span class="err">=</span> <span class="nc">current</span><span class="w"> </span><span class="n">state</span><span class="p">;</span><span class="w"> </span><span class="c1">// record current board and labels</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">cell_label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">select</span><span class="p">(</span><span class="n">labels</span><span class="p">);</span><span class="w"> </span><span class="c1">// select one label</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">solve</span><span class="p">();</span><span class="w"> </span><span class="c1">// use solver</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">dfs</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">record</span><span class="p">;</span><span class="c1">//recover state</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">state</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">record</span><span class="p">;</span><span class="w"> </span><span class="c1">//recover state</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
@@ -564,7 +564,7 @@
 
           &nbsp;&bull;&nbsp;&copy;
           
-            2024
+            2021
           
 
           
