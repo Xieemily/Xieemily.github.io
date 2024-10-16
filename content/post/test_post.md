@@ -191,16 +191,16 @@ void dfs(){
     if(visitedBoard){
         return;
     } else {
-        mark board as visited;// use hash
+        mark board as visited; // use hash
     }
     if(game solved)return;
-    for (cell: board){// iterate through board cells
+    for (cell: board){ // iterate through board cells
         if(cell has multiple label){
-            record = current state;// record current board and labels
-            cell_label = select(labels);// select one label
+            record = current state; // record current board and labels
+            cell_label = select(labels); // select one label
             solve(); // use solver
             dfs();
-            state = record;//recover state
+            state = record; //recover state
         }
     }
 }

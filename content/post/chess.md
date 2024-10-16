@@ -1,7 +1,7 @@
 ---
 title: Chess AI
 subtitle: 五子棋AI
-date: 2021-12-12
+date: 2020-12-12
 tags: ["c++", "image process", "lane detect"]
 ---
 棋盘落子位置检测，蒙特卡洛搜索及强化学习，人工智能课程大作业，人为设定函数的alpha-beta剪枝没来得及做，有点离谱。

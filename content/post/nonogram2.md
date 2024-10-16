@@ -1,6 +1,6 @@
 ---
 title: Nonogram Solver 2
-subtitle: Program Implementation
+subtitle: Implementation
 date: 2021-02-07
 tags: ["nonogram", "java"]
 ---
@@ -83,13 +83,13 @@ tags: ["nonogram", "java"]
     * Generate game when image is specified, hint is generated.
     *
     * @param path         image path
-    * @param _gameSizeRow board length y
-    * @param _gameSizeCol board length x
+    * @param gameSizeRow board length y
+    * @param gameSizeCol board length x
     * @throws IOException input error
     */
-  GameState(String path, int _gameSizeRow, int _gameSizeCol) throws IOException {
-        BOARD_SIZE_ROW = _gameSizeRow;
-        BOARD_SIZE_COL = _gameSizeCol;
+  GameState(String path, int gameSizeRow, int gameSizeCol) throws IOException {
+        BOARD_SIZE_ROW = gameSizeRow;
+        BOARD_SIZE_COL = gameSizeCol;
         board = new CellState[BOARD_SIZE_ROW][BOARD_SIZE_COL];
         GenerateGameFromImg(path);
         GenerateHint();
