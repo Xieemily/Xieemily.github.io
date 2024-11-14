@@ -8,8 +8,15 @@
     <language>en</language>
     <managingEditor>xie_my_emily@163.com (Xieemily)</managingEditor>
     <webMaster>xie_my_emily@163.com (Xieemily)</webMaster>
-    <lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 18 Jun 2024 20:22:47 +0800</lastBuildDate>
     <atom:link href="https://xieemily.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>……</title>
+      <link>https://xieemily.github.io/post/summary/</link>
+      <pubDate>Tue, 18 Jun 2024 20:22:47 +0800</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
+      <guid>https://xieemily.github.io/post/summary/</guid>
+      <description>&lt;p&gt;上次更新博客还是大三。&lt;/p&gt;&#xA;&lt;p&gt;本文和技术无关。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lane Detect</title>
       <link>https://xieemily.github.io/post/lane/</link>
