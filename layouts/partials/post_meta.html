@@ -6,14 +6,17 @@
     &nbsp;{{ $lastmodstr | i18n "lastModified"  }}
   {{ end }}
   {{ if .Site.Params.readingTime }}
-    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;{{ i18n "readingTime"}}{{ .ReadingTime }}&nbsp;{{ i18n "readTime" }}
+    &nbsp;|&nbsp;<i class="far fa-clock"></i>&nbsp;
+    {{ $readTime := div (.Content | plainify | countwords) 250 }}
+    {{ if lt $readTime 1 }}
+        1 {{ i18n "minute" }}
+    {{ else }}
+        {{ $readTime }} {{ i18n "readTime" }}
+    {{ end }}
   {{ end }}
   {{ if .Site.Params.wordCount }}
     &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;
-    Built-in: {{ .WordCount }} |
-    Plain: {{ .Content | plainify | countwords }} |
-    Raw: {{ len (split (.Content | plainify) " ") }}
-    &nbsp;{{ i18n "words" }}
+    {{ .Content | plainify | countwords }}&nbsp;{{ i18n "words" }}
   {{ end }}
   {{ if not .Site.Params.hideAuthor }}
     {{ if .Params.author }}
