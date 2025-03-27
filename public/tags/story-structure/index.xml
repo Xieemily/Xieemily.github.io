@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Story Structure on blog</title>
+    <link>http://localhost:1313/tags/story-structure/</link>
+    <description>Recent content in Story Structure on blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>xie_my_emily@163.com (Xieemily)</managingEditor>
+    <webMaster>xie_my_emily@163.com (Xieemily)</webMaster>
+    <atom:link href="http://localhost:1313/tags/story-structure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>……</title>
+      <link>http://localhost:1313/post/summary/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>xie_my_emily@163.com (Xieemily)</author>
+      <guid>http://localhost:1313/post/summary/</guid>
+      <description>&lt;p&gt;上次更新博客还是大三。&lt;/p&gt;&#xA;&lt;p&gt;本文和技术无关。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
