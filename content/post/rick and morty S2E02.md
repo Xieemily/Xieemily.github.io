@@ -1,7 +1,7 @@
 ---
 title: Rick & Morty S2E02 ———— Theme
 subtitle: Morty-Night Run
-date: 2025-03-21T20:22:47+08:00
+date: 999-03-21T20:22:47+08:00
 tags: ["script breakdown", "screenwriting"]
 draft: false
 
@@ -27,14 +27,6 @@ Rick and Morty drop Jerry off at a Jerry daycare facility. Morty tries to save t
 
 观众对故事主题的认识一般是潜意识层面的。而作为作者，主题是创作中不可或缺的指南针。故事是一系列事件的集合体，哪些事件出现在故事里，就要通过主题来做取舍。
 
-热力学定律是一个可能的解读视角。
-
-*热力学第一定律——孤立系统的能量守恒。*
-
-*热力学第二定律——孤立系统自发地朝着热力学平衡方向，即最大熵状态演化。*
-
-如果把戏剧看作由舞台，道具和人物组成的封闭系统，在一场戏的进行过程中没有外部作用，那么，系统内部的能量守恒，且朝着熵增的方向发展，这个过程是不可逆的，明确一场戏的戏剧目标，就是为了减少无效的能量耗散。
-
 ## Theme
 
 主要主题：如何定义生命的价值？救一个生命牺牲更多值不值得？ 
@@ -43,8 +35,6 @@ Rick and Morty drop Jerry off at a Jerry daycare facility. Morty tries to save t
 
 ## Script Breakdown
 A故事： Rick 卖枪给职业杀手换游戏币， Morty 救被杀手追杀的气体生物送气体回家，但得知气体回去后会消灭所有碳基生物，开枪杀死气体
-
-
 
 B故事： Jerry 被寄存在跨时空小行星上的 Jerry 托管所，和其他 Jerry 玩，试图逃走，被外界吓到，回托管所
 
@@ -90,33 +80,33 @@ B：两个 Rick 接自己的 Jerry 走， Morty 找不到小票分不清 Jerry �
 
 Joke: See that planet right there? Don’t fly too close to that planet, someone will come out and try to wash your windshield.
 
-塑造观众期望，并打破期望，是引起观众兴趣，带来更好观看体验的首要方式之一，必然性事件的信息熵很低，偶然性事件有更大的信息熵，男人打开衣柜，里面是一些纯色衬衣，这是一个普通的场景，但如果衣柜里是一把武士刀？一个纳粹盘子呢？
+塑造观众期望，并打破期望，是引起观众兴趣，带来更好观看体验的首要方式之一，主角遇到一个电力故障，发现自己活在虚拟世界里，想要回到现实，这是一个普通的故事，但如果主角费劲千辛万苦到达出口，却发现现实世界已经毁灭了，虚拟世界是人类最后的栖息地呢？这是个更有意思一点的故事。
 
 ### inciting incident
 通过不断给主角加强discomfort，激励主角行动。整个人生游戏序列就在强化这一点，给主角施加压力
 
 激励事件的来源：角色特质的冲突以及角色的内在缺陷， Rick 对生命的漠视 ---- Morty 的强烈道德感
 
-角色弧光：
+### character arc
 
-Morty救gas，对生命一视同仁，死在地毯店的平庸人生 ---- 为了全体碳基生命亲手杀死gas
+Morty救气体，对生命一视同仁，死在地毯店的平庸人生 ---- 为了碳基生命亲手杀死气体
 
 ### plot
 1. Chekhov's gun
 
-   every element in a story must be necessary and irrelevant elements should be removed. For example, if a writer features a gun in a story, there must be a reason for it, such as it being fired some time later in the plot.
+   Every element in a story must be necessary and irrelevant elements should be removed. For example, if a writer features a gun in a story, there must be a reason for it, such as it being fired some time later in the plot.
 
-2. fake ally --- gas
+2. fake ally --- 气体
 
-   通过gas的杀生行为forshadow后续的揭露
+   通过气体的杀生行为forshadow后续的揭露
 
 3. emotional impact
 
-   分开 Rick 和 Morty ，m独自杀死gas，再被不知情的 Rick 嘲讽，产生情感效果，injustice带来pity
+   分开 Rick 和 Morty ，m独自杀死气体，再被不知情的 Rick 嘲讽，产生情感效果，injustice带来pity
 
 4. recap 
 
-   在必要的时候让角色重述目标，送gas去虫洞
+   在必要的时候让角色重述目标，送气体去虫洞
 
    
 
