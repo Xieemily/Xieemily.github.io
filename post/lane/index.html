@@ -693,6 +693,7 @@
 <script>
 (function() {
   
+  if (!window.location.pathname.match(/^\/post\/.+/)) return;
   var article = document.querySelector('article.blog-post');
   if (!article) return;
 
