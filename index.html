@@ -86,7 +86,234 @@
   margin: 1em auto;
   border-radius: 4px;
 }
+
+.json-canvas-viewer {
+  color-scheme: light dark;
+  --jc-shell: #f8fafc;
+  --jc-toolbar: linear-gradient(135deg, #f8fafc, #eef2ff);
+  --jc-border: #d8dee9;
+  --jc-card: #fff;
+  --jc-text: #334155;
+  --jc-strong: #0f172a;
+  --jc-muted: #64748b;
+  --jc-grid: rgba(15, 23, 42, 0.07);
+  --jc-code-bg: #ffedd5;
+  --jc-code-text: #9a3412;
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--jc-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--jc-shell);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+.jc-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--jc-border);
+  background: var(--jc-toolbar);
+}
+.jc-title {
+  flex: 1;
+  font-weight: 700;
+  color: var(--jc-strong);
+}
+.jc-toolbar button {
+  border: 1px solid var(--jc-border);
+  border-radius: 999px;
+  background: var(--jc-card);
+  color: var(--jc-strong);
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0.45rem 0.7rem;
+}
+.jc-toolbar button:hover {
+  background: #e2e8f0;
+}
+.jc-hint {
+  color: var(--jc-muted);
+  font-size: 0.85rem;
+}
+.jc-viewport {
+  position: relative;
+  height: min(72vh, 680px);
+  min-height: 460px;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  background:
+    radial-gradient(circle at 20px 20px, var(--jc-grid) 1px, transparent 1px),
+    var(--jc-shell);
+  background-size: 24px 24px;
+}
+.jc-viewport.is-dragging {
+  cursor: grabbing;
+}
+.jc-stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+.jc-edges,
+.jc-nodes {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.jc-edges {
+  overflow: visible;
+  pointer-events: none;
+}
+.jc-edges path {
+  fill: none;
+  stroke: var(--edge-border, #64748b);
+  stroke-linecap: round;
+  stroke-opacity: 0.58;
+  stroke-width: 5px;
+  marker-end: url(#jc-arrow);
+}
+.jc-edges text {
+  fill: var(--edge-text, #334155);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.jc-group,
+.jc-node {
+  position: absolute;
+  box-sizing: border-box;
+}
+.jc-group {
+  border: 3px solid var(--node-border);
+  border-radius: 28px;
+  background: var(--node-bg);
+  opacity: 0.42;
+}
+.jc-group span {
+  position: absolute;
+  left: 28px;
+  top: 22px;
+  color: var(--node-text);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+.jc-node {
+  z-index: 1;
+  padding: 24px;
+  border: 3px solid var(--node-border);
+  border-radius: 24px;
+  background: var(--jc-card);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.14);
+  color: var(--jc-text);
+  overflow: hidden;
+}
+.jc-node::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10px;
+  background: var(--node-border);
+}
+.jc-node h3,
+.jc-node h4,
+.jc-node h5,
+.jc-node h6 {
+  margin: 0 0 0.65rem;
+  color: var(--node-text);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.jc-node p,
+.jc-node li {
+  margin: 0 0 0.5rem;
+  font-size: 19px;
+  line-height: 1.42;
+}
+.jc-node a {
+  color: #1d4ed8;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(29, 78, 216, 0.35);
+}
+.jc-node code {
+  color: var(--jc-code-text);
+  background: var(--jc-code-bg);
+}
+.jc-error {
+  margin: 0;
+  padding: 1rem;
+  color: #b91c1c;
+}
+@media (max-width: 768px) {
+  .jc-toolbar {
+    flex-wrap: wrap;
+  }
+  .jc-hint {
+    flex-basis: 100%;
+  }
+  .jc-viewport {
+    height: 560px;
+    min-height: 420px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .json-canvas-viewer {
+    --jc-shell: #0f172a;
+    --jc-toolbar: linear-gradient(135deg, #111827, #1e293b);
+    --jc-border: #334155;
+    --jc-card: #111827;
+    --jc-text: #cbd5e1;
+    --jc-strong: #f8fafc;
+    --jc-muted: #94a3b8;
+    --jc-grid: rgba(148, 163, 184, 0.16);
+    --jc-code-bg: #431407;
+    --jc-code-text: #fed7aa;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
+  }
+  .jc-toolbar button:hover {
+    background: #1e293b;
+  }
+  .jc-edges path {
+    stroke: var(--edge-border-dark, var(--edge-border, #94a3b8));
+    stroke-opacity: 0.72;
+  }
+  .jc-edges text {
+    fill: var(--edge-text-dark, var(--edge-text, #cbd5e1));
+  }
+  .jc-group {
+    border-color: var(--node-border-dark, var(--node-border));
+    background: var(--node-bg-dark, var(--node-bg));
+    opacity: 0.5;
+  }
+  .jc-group span {
+    color: var(--node-text-dark, var(--node-text));
+  }
+  .jc-node {
+    border-color: var(--node-border-dark, var(--node-border));
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  }
+  .jc-node::before {
+    background: var(--node-border-dark, var(--node-border));
+  }
+  .jc-node h3,
+  .jc-node h4,
+  .jc-node h5,
+  .jc-node h6 {
+    color: var(--node-text-dark, var(--node-text));
+  }
+  .jc-node a {
+    color: #93c5fd;
+    border-bottom-color: rgba(147, 197, 253, 0.45);
+  }
+}
 </style>
+
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -261,12 +488,12 @@
     &nbsp;|&nbsp;<i class="far fa-clock"></i>&nbsp;
     
     
-        19 minutes
+        22 minutes
     
   
   
     &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;
-    4858&nbsp;words
+    5712&nbsp;words
   
   
     
@@ -282,6 +509,57 @@
         
         <h2 id="logline">Logline</h2>
 <p>一个与社会失联的年轻人，在地铁里亲眼目睹一包盐凭空消失后，执意追查一连串诡异失踪事件，最终主动走进那个规则失效地方。</p>
+<h2 id="9个情节点">9个情节点</h2>
+<ol>
+<li>
+<p><code>被使唤</code>
+老妈看《养生堂》，讲血管和末梢；家里缺盐，主角被打发去买。
+作用：建立日常世界</p>
+</li>
+<li>
+<p><code>被击中</code>
+主角买完盐，在地铁上，盐消失。
+作用：异常第一次击中主角本人，故事正式发动。</p>
+</li>
+<li>
+<p><code>被否认</code>
+他回家说“不是丢了，是没了”，老妈不信。
+作用：主题在这里出来了，不只是东西消失，而是“你说的没人信”。</p>
+</li>
+<li>
+<p><code>开始记录</code>
+主角决定开始调查，不再把它当成一次普通丢失。
+作用：他从当事人变成主动追查的人。</p>
+</li>
+<li>
+<p><code>找到同类</code>
+他找到伞、鱼、香蕉几个案例，开始拼出异常的轮廓。
+作用：建立规则，扩大世界。</p>
+</li>
+<li>
+<p><code>误判规律</code>
+他开始主动实验，但失败；
+作用：故事从“查怪事”升级成“找规律”。</p>
+</li>
+<li>
+<p><code>公开出丑</code>
+他继续实验，围绕进隧道、灯光、人流和“持续看着它”调条件，越来越失控，开始出丑，和现实脱节。
+作用：异常不再只是谜题，开始吞掉他的正常生活。</p>
+</li>
+<li>
+<p><code>真正顿悟</code>
+老妈催面试，现实给他最后一次回头机会；他回看采访，意识到规律不在进隧道，而在没人注意的时候。
+作用：他从错误规律里翻出来，也把自己看成那个没人注意的人。</p>
+</li>
+<li>
+<p><code>主动验证自己</code>
+最后一班车里，失物回吐，他走进深处，自己也消失；第二天世界照常。
+作用：他证明了异常存在，但自己成了异常的一部分。</p>
+</li>
+</ol>
+<h2 id="canvas">Canvas</h2>
+<div class="json-canvas-viewer" data-canvas-src="/media/qidian.canvas.json"></div>
+<script defer src="/js/qidian-canvas-viewer.js"></script>
         <a href="https://xieemily.github.io/post/qidian/" class="post-read-more">[Read More]</a>
         
     </div>

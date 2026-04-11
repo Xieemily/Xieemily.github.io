@@ -65,7 +65,7 @@
   "headline": "奇点",
   "description" : "一个与社会失联的年轻人，在地铁里亲眼目睹一包盐凭空消失后，执意追查一连串诡异失踪事件，最终主动走进那个规则失效地方。",
   "inLanguage" : "en",
-  "wordCount":  506 ,
+  "wordCount":  577 ,
   "datePublished" : "2026-03-15T00:00:00\u002b08:00",
   "dateModified" : "2026-03-15T00:00:00\u002b08:00",
   "image" : "https:\/\/xieemily.github.io\/img\/avatar-icon.png",
@@ -139,7 +139,234 @@
   margin: 1em auto;
   border-radius: 4px;
 }
+
+.json-canvas-viewer {
+  color-scheme: light dark;
+  --jc-shell: #f8fafc;
+  --jc-toolbar: linear-gradient(135deg, #f8fafc, #eef2ff);
+  --jc-border: #d8dee9;
+  --jc-card: #fff;
+  --jc-text: #334155;
+  --jc-strong: #0f172a;
+  --jc-muted: #64748b;
+  --jc-grid: rgba(15, 23, 42, 0.07);
+  --jc-code-bg: #ffedd5;
+  --jc-code-text: #9a3412;
+  margin: 1.5rem 0 2rem;
+  border: 1px solid var(--jc-border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--jc-shell);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+.jc-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--jc-border);
+  background: var(--jc-toolbar);
+}
+.jc-title {
+  flex: 1;
+  font-weight: 700;
+  color: var(--jc-strong);
+}
+.jc-toolbar button {
+  border: 1px solid var(--jc-border);
+  border-radius: 999px;
+  background: var(--jc-card);
+  color: var(--jc-strong);
+  font-size: 0.9rem;
+  line-height: 1;
+  padding: 0.45rem 0.7rem;
+}
+.jc-toolbar button:hover {
+  background: #e2e8f0;
+}
+.jc-hint {
+  color: var(--jc-muted);
+  font-size: 0.85rem;
+}
+.jc-viewport {
+  position: relative;
+  height: min(72vh, 680px);
+  min-height: 460px;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+  background:
+    radial-gradient(circle at 20px 20px, var(--jc-grid) 1px, transparent 1px),
+    var(--jc-shell);
+  background-size: 24px 24px;
+}
+.jc-viewport.is-dragging {
+  cursor: grabbing;
+}
+.jc-stage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+}
+.jc-edges,
+.jc-nodes {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.jc-edges {
+  overflow: visible;
+  pointer-events: none;
+}
+.jc-edges path {
+  fill: none;
+  stroke: var(--edge-border, #64748b);
+  stroke-linecap: round;
+  stroke-opacity: 0.58;
+  stroke-width: 5px;
+  marker-end: url(#jc-arrow);
+}
+.jc-edges text {
+  fill: var(--edge-text, #334155);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+.jc-group,
+.jc-node {
+  position: absolute;
+  box-sizing: border-box;
+}
+.jc-group {
+  border: 3px solid var(--node-border);
+  border-radius: 28px;
+  background: var(--node-bg);
+  opacity: 0.42;
+}
+.jc-group span {
+  position: absolute;
+  left: 28px;
+  top: 22px;
+  color: var(--node-text);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+.jc-node {
+  z-index: 1;
+  padding: 24px;
+  border: 3px solid var(--node-border);
+  border-radius: 24px;
+  background: var(--jc-card);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.14);
+  color: var(--jc-text);
+  overflow: hidden;
+}
+.jc-node::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10px;
+  background: var(--node-border);
+}
+.jc-node h3,
+.jc-node h4,
+.jc-node h5,
+.jc-node h6 {
+  margin: 0 0 0.65rem;
+  color: var(--node-text);
+  font-family: Georgia, "Noto Serif SC", serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.jc-node p,
+.jc-node li {
+  margin: 0 0 0.5rem;
+  font-size: 19px;
+  line-height: 1.42;
+}
+.jc-node a {
+  color: #1d4ed8;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(29, 78, 216, 0.35);
+}
+.jc-node code {
+  color: var(--jc-code-text);
+  background: var(--jc-code-bg);
+}
+.jc-error {
+  margin: 0;
+  padding: 1rem;
+  color: #b91c1c;
+}
+@media (max-width: 768px) {
+  .jc-toolbar {
+    flex-wrap: wrap;
+  }
+  .jc-hint {
+    flex-basis: 100%;
+  }
+  .jc-viewport {
+    height: 560px;
+    min-height: 420px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .json-canvas-viewer {
+    --jc-shell: #0f172a;
+    --jc-toolbar: linear-gradient(135deg, #111827, #1e293b);
+    --jc-border: #334155;
+    --jc-card: #111827;
+    --jc-text: #cbd5e1;
+    --jc-strong: #f8fafc;
+    --jc-muted: #94a3b8;
+    --jc-grid: rgba(148, 163, 184, 0.16);
+    --jc-code-bg: #431407;
+    --jc-code-text: #fed7aa;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.42);
+  }
+  .jc-toolbar button:hover {
+    background: #1e293b;
+  }
+  .jc-edges path {
+    stroke: var(--edge-border-dark, var(--edge-border, #94a3b8));
+    stroke-opacity: 0.72;
+  }
+  .jc-edges text {
+    fill: var(--edge-text-dark, var(--edge-text, #cbd5e1));
+  }
+  .jc-group {
+    border-color: var(--node-border-dark, var(--node-border));
+    background: var(--node-bg-dark, var(--node-bg));
+    opacity: 0.5;
+  }
+  .jc-group span {
+    color: var(--node-text-dark, var(--node-text));
+  }
+  .jc-node {
+    border-color: var(--node-border-dark, var(--node-border));
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+  }
+  .jc-node::before {
+    background: var(--node-border-dark, var(--node-border));
+  }
+  .jc-node h3,
+  .jc-node h4,
+  .jc-node h5,
+  .jc-node h6 {
+    color: var(--node-text-dark, var(--node-text));
+  }
+  .jc-node a {
+    color: #93c5fd;
+    border-bottom-color: rgba(147, 197, 253, 0.45);
+  }
+}
 </style>
+
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
@@ -285,12 +512,12 @@
     &nbsp;|&nbsp;<i class="far fa-clock"></i>&nbsp;
     
     
-        19 minutes
+        22 minutes
     
   
   
     &nbsp;|&nbsp;<i class="fas fa-book"></i>&nbsp;
-    4858&nbsp;words
+    5712&nbsp;words
   
   
     
@@ -318,53 +545,107 @@
       <article role="main" class="blog-post">
         <h2 id="logline">Logline</h2>
 <p>一个与社会失联的年轻人，在地铁里亲眼目睹一包盐凭空消失后，执意追查一连串诡异失踪事件，最终主动走进那个规则失效地方。</p>
+<h2 id="9个情节点">9个情节点</h2>
+<ol>
+<li>
+<p><code>被使唤</code>
+老妈看《养生堂》，讲血管和末梢；家里缺盐，主角被打发去买。
+作用：建立日常世界</p>
+</li>
+<li>
+<p><code>被击中</code>
+主角买完盐，在地铁上，盐消失。
+作用：异常第一次击中主角本人，故事正式发动。</p>
+</li>
+<li>
+<p><code>被否认</code>
+他回家说“不是丢了，是没了”，老妈不信。
+作用：主题在这里出来了，不只是东西消失，而是“你说的没人信”。</p>
+</li>
+<li>
+<p><code>开始记录</code>
+主角决定开始调查，不再把它当成一次普通丢失。
+作用：他从当事人变成主动追查的人。</p>
+</li>
+<li>
+<p><code>找到同类</code>
+他找到伞、鱼、香蕉几个案例，开始拼出异常的轮廓。
+作用：建立规则，扩大世界。</p>
+</li>
+<li>
+<p><code>误判规律</code>
+他开始主动实验，但失败；
+作用：故事从“查怪事”升级成“找规律”。</p>
+</li>
+<li>
+<p><code>公开出丑</code>
+他继续实验，围绕进隧道、灯光、人流和“持续看着它”调条件，越来越失控，开始出丑，和现实脱节。
+作用：异常不再只是谜题，开始吞掉他的正常生活。</p>
+</li>
+<li>
+<p><code>真正顿悟</code>
+老妈催面试，现实给他最后一次回头机会；他回看采访，意识到规律不在进隧道，而在没人注意的时候。
+作用：他从错误规律里翻出来，也把自己看成那个没人注意的人。</p>
+</li>
+<li>
+<p><code>主动验证自己</code>
+最后一班车里，失物回吐，他走进深处，自己也消失；第二天世界照常。
+作用：他证明了异常存在，但自己成了异常的一部分。</p>
+</li>
+</ol>
+<h2 id="canvas">Canvas</h2>
+<div class="json-canvas-viewer" data-canvas-src="/media/qidian.canvas.json"></div>
+<script defer src="/js/qidian-canvas-viewer.js"></script>
 <div class="screenplay">
 <h1 id="script">Script</h1>
 <hr>
 <h2 id="1-内景-家里---日">1. 内景 家里 - 日</h2>
-<p>电视里播着《养生堂》。主角坐在沙发上，盯着电视。老妈在厨房做饭。</p>
+<p>电视里播着《养生堂》，女主持人在讲话。</p>
+<p>吴申坐在沙发上，25岁，他是打眼看上去就那种废在家里的人，头发乱糟糟的，穿着松松垮垮的睡衣，盯着电视，吃瓜子。电视声音开得很大，混着炒菜的声音从厨房传过来。</p>
 <p class="char">电视主持人</p>
-<p class="dial">人体里的血管，其实就像城市里的交通系统。</p>
-<p class="char">老妈</p>
-<p class="dial">家里没盐了。你去买一包。</p>
+<p class="dial">人体里的血管，其实就像交通公路一样。它负责运输，把人和货送到该去的地方，每天把氧气、营养运到全身。</p>
+<p class="char">老妈（画外）</p>
+<p class="dial">家里没有盐了！</p>
 <p class="char">主角</p>
-<p class="dial">现在？</p>
-<p class="char">老妈</p>
-<p class="dial">不然呢。要那种，别买错了。</p>
-<p class="char">主角</p>
+<p class="dial">抽屉里呢？</p>
+<p class="char">老妈（画外）</p>
+<p class="dial">也没有了，你赶紧去超市买一包。要那个包装的，别买错了。</p>
+<p>主角起身，在沙发上的一堆东西里翻找。啤酒罐掉在地上。</p>
+<p class="char">老妈（画外）</p>
 <p class="dial">哪种？</p>
-<p class="char">老妈</p>
-<p class="dial">就那种。</p>
-<p>主角起身，拿上手机和钥匙。</p>
+<p class="char">主角</p>
+<p class="dial">就那种。别买错了。</p>
+<p>他找到了目标，他的手机。</p>
+<p class="char">主角</p>
+<p class="dial">哪种啊？</p>
 <hr>
 <h2 id="2-外景-楼道--街道---日">2. 外景 楼道 / 街道 - 日</h2>
-<p class="char">电视主持人</p>
+<p class="char">电视主持人（画外）</p>
 <p class="dial">主干道负责大的流动，越往后，越是细小的支路和末梢。</p>
 <p>老小区，没电梯。</p>
 <p>他一层层下楼，走出单元门。</p>
 <hr>
 <h2 id="3-内景-地铁站---日">3. 内景 地铁站 - 日</h2>
-<p class="char">电视主持人</p>
+<p class="char">电视主持人（画外）</p>
 <p class="dial">每天，几百亿个红细胞经过血管。</p>
 <p>人们进入地铁口。他也随着人流进站。LED屏幕滚动着到站信息。</p>
-<p class="char">电视主持人</p>
+<p class="char">电视主持人（画外）</p>
 <p class="dial">流过淋巴结的时候，免疫细胞会检查里面有没有不该存在的东西。</p>
 <p>排队安检。</p>
-<p class="char">电视主持人</p>
-<p class="dial">病毒、细菌、异物。</p>
-<p>传送带上是背包、拉杆箱、玩偶。</p>
-<p class="char">电视主持人</p>
+<p class="char">电视主持人（画外）</p>
+<p class="dial">病毒啊、细菌啊。</p>
+<p>传送带上的背包、拉杆箱。</p>
+<p class="char">电视主持人（画外）</p>
 <p class="dial">到了毛细血管，有一些蛋白质会漏出去。</p>
-<p>地铁里，掉在地上五块钱纸币。</p>
-<p class="char">电视主持人</p>
+<p>地铁车厢里，掉在地上五块钱纸币。</p>
+<p class="char">电视主持人（画外）</p>
 <p class="dial">这些漏出去的蛋白质大部分会被淋巴系统回收。</p>
 <p>他捡起纸币。</p>
-<p class="char">电视主持人</p>
+<p class="char">电视主持人（画外）</p>
 <p class="dial">有一小部分，永远也回不来了。</p>
-<p>保洁阿姨把垃圾倒进垃圾桶。</p>
-<p class="char">电视主持人</p>
+<p>站台，保洁阿姨把垃圾倒进垃圾桶。</p>
+<p class="char">电视主持人（画外）</p>
 <p class="dial">血管最细小的末梢出了问题，一开始，身体往往察觉不到。</p>
-<p>列车到站。门开。他上车。</p>
 <hr>
 <h2 id="4-外景-小超市---日">4. 外景 小超市 - 日</h2>
 <p>超市招牌有点破旧——大刘便利店。</p>
@@ -375,15 +656,17 @@
 <p>他的手拿起一包盐，旁边有人走过，货架间隙狭窄，他侧身让开。</p>
 <p>让一个大爷。</p>
 <p>让一个拿篮子的女人。</p>
-<p class="char">收银员</p>
-<p class="dial">三块五。</p>
-<p>他拿着盐从超市出来，走了几步，低头看一眼袋子。</p>
+<p>他伸手，去够货架最上面的东西。</p>
+<hr>
+<h2 id="6-外景-小超市---日">6. 外景 小超市 - 日</h2>
+<p>他拿着盐从超市出来，走了几步，低头看一眼袋子，绿色包装。</p>
 <p>又看了一眼。</p>
 <p>他转身回去。</p>
 <hr>
-<h2 id="6-内景-地铁车厢---日">6. 内景 地铁车厢 - 日</h2>
-<p>他坐在地铁上，盐放在旁边的空座上。</p>
-<p>过了一会，对面多一个女人。</p>
+<h2 id="7-内景-地铁车厢---日">7. 内景 地铁车厢 - 日</h2>
+<p>一包盐放在地铁的空座上。红色包装的。</p>
+<p>他坐在座位上。</p>
+<p>对面，坐着一个女人，在对着小镜子化妆。</p>
 <p>列车又到站了。开门。关门。上来了好几个人。</p>
 <p>列车进入隧道，车厢暗下来。</p>
 <p>列车驶出隧道。</p>
@@ -393,14 +676,13 @@
 <p>列车晃了一下。</p>
 <p>他再看一眼空着的座椅，不知所措。他看向旁边的人。</p>
 <p class="char">主角</p>
-<p class="dial">你们看见这个座位上的东西了吗？</p>
-<p>他们抬头，迷茫，他的视线落在对面的女人上，女人摇头。</p>
+<p class="dial">看见这个座位上的东西了吗？</p>
+<p>没人理他，他的视线落在对面的女人上，女人注意到了，皱眉，转过头。</p>
 <p class="char">男人</p>
 <p class="dial">这里经常丢东西，就这两站。</p>
-<p>他说完，低头玩手机。</p>
 <p>主角看着空着的座椅。</p>
 <hr>
-<h2 id="7-内景-家里---日">7. 内景 家里 - 日</h2>
+<h2 id="8-内景-家里---日">8. 内景 家里 - 日</h2>
 <p>门开。</p>
 <p>老妈在厨房，听见动静，探出头。</p>
 <p class="char">老妈</p>
@@ -413,20 +695,31 @@
 <p class="char">老妈</p>
 <p class="dial">没了？</p>
 <p class="char">主角</p>
-<p class="dial">不是丢了。是消失了，我看着它没的。</p>
+<p class="dial">消失了，我看着它没的。</p>
 <p class="char">老妈</p>
 <p class="dial">忘了就说忘了，事情交给你办，就没放心过。</p>
 <p class="char">主角</p>
-<p class="dial">不是丢了。真的是消失了。</p>
+<p class="dial">不是忘了。真的是消失了。</p>
 <p>老妈叹气，一种平静的绝望。</p>
 <p class="char">老妈</p>
-<p class="dial">多大个人了，还能指望你什么。</p>
+<p class="dial">多大个人了，还能指望你什么。昨天洗衣机里面又有纸，搞得到处都是，肯定是你裤子口袋里的。</p>
 <p class="char">主角</p>
-<p class="dial">你就是不信我，你什么时候好好听过我说话？</p>
+<p class="dial">不是我的，我没放——</p>
 <p class="char">老妈</p>
-<p class="dial">怎么，还凭空蒸发了？牛顿棺材板都要被你掀了。</p>
+<p class="dial">你看看你表哥，人家也没比你大几岁，都做上领导了，你呢？一包盐都丢。</p>
+<p class="char">主角</p>
+<p class="dial">不是丢了，你有没有在听我说话？</p>
+<p class="char">老妈</p>
+<p class="dial">你姨过两天来做客，到时候你去外面坐坐，到下班时间再回来，天天待在家里像什么样子。</p>
+<p class="char">主角</p>
+<p class="dial">我是说真的！消失了！</p>
+<p class="char">老妈</p>
+<p class="dial">喊什么？</p>
+<p>主角抓起外套，出去，重重关上门。</p>
+<p class="char">老妈</p>
+<p class="dial">干什么去！</p>
 <hr>
-<h2 id="8-内景-站台---日">8. 内景 站台 - 日</h2>
+<h2 id="9-内景-站台---日">9. 内景 站台 - 日</h2>
 <p>他坐在站台长椅一头，手机靠在空矿泉水瓶上，对着自己。</p>
 <p>点开录像。</p>
 <p>红点亮起。</p>
@@ -437,7 +730,7 @@
 <p>他把瓶子扔进垃圾桶。</p>
 <p>保洁阿姨继续往前走。</p>
 <hr>
-<h2 id="9-内景-站台另一侧---日">9. 内景 站台另一侧 - 日</h2>
+<h2 id="10-内景-站台另一侧---日">10. 内景 站台另一侧 - 日</h2>
 <p>一个中年女人，四十多岁，穿着通勤的外套，挎着一个深色的包。她非常认真。</p>
 <p class="char">主角（画外）</p>
 <p class="dial">就在这里，对吧？</p>
@@ -451,7 +744,7 @@
 <p class="char">上班族</p>
 <p class="dial">不是忘了。我不会忘。我——</p>
 <hr>
-<h2 id="10-内景-站台座椅旁---日">10. 内景 站台座椅旁 - 日</h2>
+<h2 id="11-内景-站台座椅旁---日">11. 内景 站台座椅旁 - 日</h2>
 <p>一个退休老师。六十多岁，头发花白，穿着一件看不出颜色的薄外套。他坐在站台的塑料座椅上，腿上放着一个塑料袋。</p>
 <p>语气很平，没有任何要把这件事讲成故事的意思。</p>
 <p class="char">退休老师</p>
@@ -472,7 +765,7 @@
 <p class="char">退休老师</p>
 <p class="dial">就是没有了。</p>
 <hr>
-<h2 id="11-内景-站台---日">11. 内景 站台 - 日</h2>
+<h2 id="12-内景-站台---日">12. 内景 站台 - 日</h2>
 <p class="char">白领</p>
 <p class="dial">香蕉。</p>
 <p class="char">主角（画外）</p>
@@ -491,14 +784,14 @@
 <p class="char">白领</p>
 <p class="dial">我买回来之后，正好放了两天一夜，少了皮上会带绿色，再晚几个小时，就会开始长黑点，但那天早上，就那天早上，我起来的时候，它就在那个果盘里，完美，没有一丝绿色，也没有一个黑点。下车之后，就没了。没有生物能抗拒那么完美的香蕉。</p>
 <hr>
-<h2 id="12-内景-小超市---日">12. 内景 小超市 - 日</h2>
+<h2 id="13-内景-小超市---日">13. 内景 小超市 - 日</h2>
 <p>货架。各种盐摆在一排。</p>
 <p>他拿起一包最普通的食盐。</p>
 <p>又放回去。</p>
 <p>拿起另一包。</p>
 <p>最后还是拿回最开始那包。</p>
 <hr>
-<h2 id="13-内景-地铁车厢---日">13. 内景 地铁车厢 - 日</h2>
+<h2 id="14-内景-地铁车厢---日">14. 内景 地铁车厢 - 日</h2>
 <p>他坐在座位上。膝盖上放着一包盐。</p>
 <p>他盯着车窗外。</p>
 <p>列车到站，开门。关门。</p>
@@ -515,7 +808,7 @@
 <p>门开，他下车，低头，又看一眼。</p>
 <p>盐还在。</p>
 <hr>
-<h2 id="14-内景-家-客厅---日">14. 内景 家 客厅 - 日</h2>
+<h2 id="15-内景-家-客厅---日">15. 内景 家 客厅 - 日</h2>
 <p>饭桌上，一大碗番茄鸡蛋汤。</p>
 <p>电视里放着《养生堂》。</p>
 <p class="char">老妈</p>
@@ -538,24 +831,24 @@
 <p>主角没松。</p>
 <p>电视上先是一段宇宙影像。光点、尘埃、缓慢收缩的旋涡。</p>
 <p class="char">电视主持人</p>
-<p class="dial">当所有东西都被压向同一个点，最先消失的，往往不是它们本身，而是它们之间的距离。</p>
+<p class="dial">当所有东西都被压向同一个点，这就是宇宙奇点。那么，奇点出现的概率有多大呢？这就要提到另一个理论了。</p>
 <p>电视上，一只猴子坐在打字机前面。</p>
 <p><img src="https://xmy-1309475607.cos.ap-shanghai.myqcloud.com/obsidian20260315170355858.png" alt="image.png"></p>
 <p>猴子在乱敲。字母在屏幕上随机跳出来。</p>
 <p class="char">电视主持人</p>
-<p class="dial">概率猴子定理是什么呢？就是说，让猴子坐在打字机前面，一直打，一直打，只要次数足够多，总有一天，它能打出莎士比亚。</p>
+<p class="dial">概率猴子定理是什么？就是说，让猴子坐在打字机前面，一直打，一直打，只要次数足够多，总有一天，它能打出莎士比亚。</p>
 <p>两个人都停了一下。</p>
 <p>老妈把遥控器抢回去。</p>
 <p class="char">老妈</p>
 <p class="dial">面试的事，你记住没有？</p>
 <p>电视又跳回《养生堂》。</p>
 <hr>
-<h2 id="15-内景-便利店---日">15. 内景 便利店 - 日</h2>
+<h2 id="16-内景-便利店---日">16. 内景 便利店 - 日</h2>
 <p>收银台前摆着几种盐。</p>
 <p>他随手拿起一包。</p>
 <p>想了想，又换成袋子更硬的一包。</p>
 <hr>
-<h2 id="16-内景-地铁车厢---日">16. 内景 地铁车厢 - 日</h2>
+<h2 id="17-内景-地铁车厢---日">17. 内景 地铁车厢 - 日</h2>
 <p>同样的角度。膝盖上放着一包盐。背后窗外，广告灯在显示视频。</p>
 <p>到站了。开门。关门。</p>
 <p>他没有坐着等。</p>
@@ -571,54 +864,85 @@
 <p>车厢里的人看着他。</p>
 <p>他拿起盐下车了。</p>
 <hr>
-<h2 id="17-内景-站台---日">17. 内景 站台 - 日</h2>
+<h2 id="18-内景-站台---日">18. 内景 站台 - 日</h2>
 <p>他坐在站台上，背着背包，刚喝完了一盒果汁。</p>
 <p>保洁阿姨从远处推着垃圾桶过来。走到他旁边的时候，步子慢了一下。</p>
 <p>她看他一眼。</p>
 <p>他把盒子扔进垃圾桶。</p>
 <hr>
-<h2 id="18-内景-地铁车厢--站台---夜">18. 内景 地铁车厢 / 站台 - 夜</h2>
+<h2 id="19-内景-地铁车厢---夜">19. 内景 地铁车厢 - 夜</h2>
 <p>同样一包盐。</p>
 <p>这次他没有坐着等。</p>
-<p>他拿着盐，在车厢里来回走。</p>
-<p>到站。开门。</p>
-<p>他把盐放在靠门的位置，自己退开两步，盯着看。</p>
-<p>关门前一秒，他又冲回去，把盐抓起来。</p>
-<p>下一站。</p>
-<p>他守在窗边，等着。</p>
-<p>窗外一黑。</p>
-<p>他立刻把盐放下。</p>
-<p>广告灯闪过来。包装一亮一亮。</p>
-<p>他不眨眼地盯着。</p>
-<p>列车出隧道。</p>
+<p>他把盐放在旁边空座上。</p>
+<p>又拿出手机，靠在对面座位的扶手边。</p>
+<p>屏幕里，盐在画面正中。</p>
+<p>红点亮着。</p>
+<p>到站。开门。关门。</p>
+<p>他不看窗外，只盯着手机屏幕里的盐。</p>
+<p>窗外一黑。列车进隧道。</p>
+<p>广告灯闪过来。白色包装一亮一暗。</p>
 <p>盐还在。</p>
-<p>再下一站。</p>
-<p>他蹲下来。</p>
-<p>手里多了一根筷子。</p>
-<p>他把那根筷子斜着卡进车门边的缝隙里，一头在里，一头还露在外面。</p>
-<p>他站起来，盯着门缝、盯着广告灯、盯着黑下去又亮起来的窗外。</p>
-<p>到站。提示音响。</p>
-<p>车门开始合上。</p>
-<p>他不动，像是在等门把那根筷子“吃进去”。</p>
-<p>最后一秒，他又扑上去，把筷子抽出来。</p>
-<p>人群看着他，慢慢让开一点距离。</p>
+<p>下一站，他把盐挪到靠门的位置。</p>
+<p>手机也跟着挪过去。</p>
+<p>有人上车，腿挡住了镜头。</p>
+<p>他立刻站起来。</p>
+<p class="char">主角</p>
+<p class="dial">等一下，别挡。</p>
+<p>那人看他。</p>
+<p>周围几个人也看过来。</p>
+<p>他把手机又往旁边挪，继续拍那包盐。</p>
+<p>门关上。车开了。</p>
+<p>盐还在。</p>
+<p>他盯着屏幕，眼睛发红。</p>
+<p>又一次进隧道。</p>
+<p>他几乎不眨眼。</p>
+<p>盐还在。</p>
+<p>车门开。</p>
+<p>人群往外走。</p>
+<p>他的手机对着那包盐。</p>
+<p>一个女乘客停下来，看着他的手机。</p>
+<p class="char">乘客</p>
+<p class="dial">你拍什么呢？</p>
+<p>主角一愣。</p>
+<p class="char">乘客</p>
+<p class="dial">你拍我了吧？</p>
+<p>乘客一把按住他的手腕。</p>
+<p class="char">主角</p>
+<p class="dial">不是，我没拍你。</p>
+<p class="char">乘客</p>
+<p class="dial">那你拍什么？</p>
+<p>周围人停下来。乘客声音大起来。</p>
+<p class="char">乘客</p>
+<p class="dial">他偷拍我！</p>
+<p>周围的乘客都看着他，神色不一。</p>
+<p>他越急越说不清。那包盐滚到地上。他蹲下去捡，手忙脚乱。</p>
 <hr>
-<h2 id="19-内景-站台---夜">19. 内景 站台 - 夜</h2>
-<p>他刚把筷子从门缝里猛地抽出来，整个人往后踉跄了一下。</p>
-<p>车门合上。</p>
-<p>列车出站，发出轰鸣声。</p>
-<p>他站在原地，手里还攥着那根筷子。</p>
-<p>保洁阿姨在远处停下来，拄着拖把，显然看见了刚才那一下。</p>
-<p>她朝这边大声说了什么，声音被进站的车盖过去了，只看见她的面部动作。</p>
-<p>他抬头。</p>
-<p>声音减弱，她的声音浮现。</p>
-<p class="char">保洁</p>
-<p class="dial">别往门缝里塞东西！</p>
-<p>安静了一秒。</p>
-<p>他站在那里，手里那根筷子一下变得特别显眼。</p>
-<p>人群看着他，慢慢让开一点距离。</p>
+<h2 id="20-内景-站台---夜">20. 内景 站台 - 夜</h2>
+<p>一个站务员站在他和乘客中间。</p>
+<p class="char">乘客</p>
+<p class="dial">他拿手机这样拍我。</p>
+<p>她示意了一下，低角度。</p>
+<p class="char">主角</p>
+<p class="dial">我没有。</p>
+<p>站务员拿起他的手机。</p>
+<p>屏幕里，是一段地铁空座上的盐。</p>
+<p>往前划。</p>
+<p>还是盐。</p>
+<p>再往前划。</p>
+<p>还是盐。</p>
+<p>站务员看他。乘客消了气，不解。</p>
+<p class="char">站务员</p>
+<p class="dial">你拍这个干什么？</p>
+<p>主角低着头。</p>
+<p class="char">主角</p>
+<p class="dial">对不起。</p>
+<p class="char">站务员</p>
+<p class="dial">以后别拍了啊。</p>
+<p>主角点头。</p>
+<p class="char">主角</p>
+<p class="dial">对不起。</p>
 <hr>
-<h2 id="20-内景-家-厨房--客厅---夜">20. 内景 家 厨房 / 客厅 - 夜</h2>
+<h2 id="21-内景-家-客厅---夜">21. 内景 家 客厅 - 夜</h2>
 <p>客厅，二人并排坐着。电视在播科普节目。</p>
 <p>桌上，一盘毛豆，一盘没剥皮的。他在撕掉两边的丝，看电视，心不在焉。</p>
 <p class="char">电视主持人</p>
@@ -629,15 +953,12 @@
 <p>她拿起盘子，往厨房走，去倒掉皮，声音从厨房传过来。</p>
 <p class="char">老妈</p>
 <p class="dial">晚上早点睡啊，明天的面试，千万不要忘了。</p>
-<p>拉开抽屉的声音。</p>
-<p class="char">老妈</p>
-<p class="dial">怎么少了一根筷子。</p>
-<p>她关上抽屉。走回来。</p>
+<p>她走回来。</p>
 <p class="char">老妈</p>
 <p class="dial">人家介绍的，一定要好好面，一早就过去，不要晚了，早高峰人多，堵车，门口——。</p>
 <p>后面的话变得模糊起来，他只盯着手里的豆子，把毛豆尖掰掉，往下扯，扯到一半，丝断开了。</p>
 <hr>
-<h2 id="21-内景-房间---夜">21. 内景 房间 - 夜</h2>
+<h2 id="22-内景-房间---夜">22. 内景 房间 - 夜</h2>
 <p>啪。关灯。房间暗了。</p>
 <p>他躺在床上。</p>
 <p>他翻了个身。</p>
@@ -668,7 +989,7 @@
 <p class="dial">是没人注意的时候。</p>
 <p>然后——被子掀开的声音。</p>
 <hr>
-<h2 id="22-内景-地铁站---夜">22. 内景 地铁站 - 夜</h2>
+<h2 id="23-内景-地铁站---夜">23. 内景 地铁站 - 夜</h2>
 <p>脚步声很快。他在跑。</p>
 <p>地铁站的灯还亮着，但通道里几乎没有人了。他的呼吸声很重，地面，下楼梯，路过墙上的指示牌，冲过闸机。</p>
 <p>站台上空的。他停在站台边缘。</p>
@@ -681,7 +1002,7 @@
 <p>隧道里传来列车的声音，车来了。</p>
 <p>门开。</p>
 <hr>
-<h2 id="23-内景-车厢内---夜">23. 内景 车厢内 - 夜</h2>
+<h2 id="24-内景-车厢内---夜">24. 内景 车厢内 - 夜</h2>
 <p>只有他一个人。</p>
 <p>白色的灯管。座椅一排，全是空的。</p>
 <p>他坐下来。</p>
@@ -721,19 +1042,19 @@
 <p>往前走。</p>
 <p>黑暗从车厢尽头漫过来，把他吞噬。</p>
 <hr>
-<h2 id="24-内景-地铁站---夜">24. 内景 地铁站 - 夜</h2>
+<h2 id="25-内景-地铁站---夜">25. 内景 地铁站 - 夜</h2>
 <p>列车到站，门打开，无人。</p>
 <p>站台空无一人。</p>
 <hr>
-<h2 id="25-内景-家---日">25. 内景 家 - 日</h2>
+<h2 id="26-内景-卧室---日">26. 内景 卧室 - 日</h2>
 <p>白天的光从窗帘缝隙里照进来。</p>
 <p>走廊。老妈的拖鞋声。</p>
-<p class="char">老妈</p>
+<p class="char">老妈（画外）</p>
 <p class="dial">早饭放桌上了啊，起来记得吃。</p>
 <p>房间里没有人。</p>
 <p>床上被子掀开着，枕头上有个凹下去的印子。</p>
 <hr>
-<h2 id="26-内景-地铁站---日">26. 内景 地铁站 - 日</h2>
+<h2 id="27-内景-地铁站---日">27. 内景 地铁站 - 日</h2>
 <p>凌晨五点的地铁站。空着的站台。</p>
 <p>保洁阿姨从画面右侧走进来。蓝色工服，拖把。她在擦站台的玻璃护栏。和之前每一次一样。</p>
 <p>她擦到一个位置，停了一下，低头。</p>
